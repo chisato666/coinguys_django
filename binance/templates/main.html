@@ -1,0 +1,291 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>
+Back Testing System - Main Screen 001
+</title>
+
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta name="generator" content="Wufoo">
+<meta name="robots" content="index, follow">
+
+<!-- CSS -->
+<link href="css/structure.css" rel="stylesheet">
+<link href="css/form.css" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
+
+<!-- JavaScript -->
+<script src="scripts/wufoo.js"></script>
+
+<!--[if lt IE 10]>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body id="public">
+<div id="container" class="ltr">
+
+<h1 class="col3" id="logo"> Coinguys back test system</h1>
+
+  
+<form
+  id="form1"
+  name="form1"
+  class="wufoo topLabel page"
+  accept-charset="UTF-8"
+  autocomplete="off"
+  enctype="multipart/form-data"
+  method="post"
+  novalidate
+      action="https://chisato666.wufoo.com/forms/z1fm6olg1etvadd/#public"
+  >
+
+<header id="header" class="info">
+<h2 class="0">Back Testing System - Main Screen 001</h2>
+<div class="0">Please enter the data for back testing</div>
+</header><ul>
+<li id="foli3" class="date notranslate      ">
+<label class="desc" id="title3">
+From Date
+</label>
+<span>
+<input id="Field3-1" name="Field3-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="0"       />
+<label for="Field3-1">MM</label>
+</span>
+<span class="symbol">/</span>
+<span>
+<input id="Field3-2" name="Field3-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="0" />
+<label for="Field3-2">DD</label>
+</span>
+<span class="symbol">/</span>
+<span>
+ <input id="Field3" name="Field3" type="text" class="field text" value="" size="4" maxlength="4" tabindex="0" />
+<label for="Field3">YYYY</label>
+</span>
+<span id="cal3">
+<img
+id="pick3" class="datepicker" src="https://static.wufoo.comimages/calendar.png" alt="Pick a date." data-date-format="yyyy-mm-dd" data-date="today" />
+</span>
+</li>
+<li id="foli4" class="date notranslate      ">
+<label class="desc" id="title4">
+To Date
+</label>
+<span>
+<input id="Field4-1" name="Field4-1" type="text" class="field text" value="" size="2" maxlength="2" tabindex="0"       />
+<label for="Field4-1">MM</label>
+</span>
+<span class="symbol">/</span>
+<span>
+<input id="Field4-2" name="Field4-2" type="text" class="field text" value="" size="2" maxlength="2" tabindex="0" />
+<label for="Field4-2">DD</label>
+</span>
+<span class="symbol">/</span>
+<span>
+ <input id="Field4" name="Field4" type="text" class="field text" value="" size="4" maxlength="4" tabindex="0" />
+<label for="Field4">YYYY</label>
+</span>
+<span id="cal4">
+<img
+id="pick4" class="datepicker" src="https://static.wufoo.comimages/calendar.png" alt="Pick a date." data-date-format="yyyy-mm-dd" data-date="today" />
+</span>
+</li>
+<li id="foli6" class="      " >
+<label class="desc notranslate" id="title6" for="Field6">
+Time Frame
+</label>
+<div>
+<select id="Field6" name="period" class="field select medium"       tabindex="0" data-wufoo-field="dropdown" >
+<option
+value="" >
+<span class="notranslate"></span>
+</option>
+<option
+value="1m" >
+<span class="notranslate">1m</span>
+</option>
+<option
+value="5m" >
+<span class="notranslate">5m</span>
+</option>
+<option
+value="1h" >
+<span class="notranslate">1h</span>
+</option>
+<option
+value="4h" >
+<span class="notranslate">4h</span>
+</option>
+<option
+value="1d" selected="selected">
+<span class="notranslate">1d</span>
+</option>
+</select>
+</div>
+</li>
+<li id="foli8" class="      " >
+<label class="desc notranslate" id="title8" for="Field8">
+Symbol
+</label>
+<div>
+ <select id="symbol" name="symbol">
+                    {% for symbol in symbols %}
+                        <option>{{ symbol['symbol'] }}</option>
+                    {% endfor %}
+                </select>
+</div>
+</li><li id="foli12" class="notranslate section      ">
+<section>
+<h3 id="title12">
+Buy Strategy
+</h3>
+<div id="instruct12">Please enter the buying strategy:</div>
+</section>
+</li>
+<li id="foli9" class="      " >
+<label class="desc notranslate" id="title9" for="Field9">
+Indicator
+</label>
+<div>
+<select id="Field9" name="Field9" class="field select medium"       tabindex="0" data-wufoo-field="dropdown" >
+<option
+value="Current Price" selected="selected">
+<span class="notranslate">Current Price</span>
+</option>
+<option
+value="MA10" >
+<span class="notranslate">MA10</span>
+</option>
+<option
+value="MA20" >
+<span class="notranslate">MA20</span>
+</option>
+<option
+value="MA30" >
+<span class="notranslate">MA30</span>
+</option>
+<option
+value="RSI" >
+<span class="notranslate">RSI</span>
+</option>
+<option
+value="MACD" >
+<span class="notranslate">MACD</span>
+</option>
+</select>
+</div>
+</li>
+<li id="foli10" class="      " >
+<label class="desc notranslate" id="title10" for="Field10">
+Operator
+</label>
+<div>
+<select id="Field10" name="Field10" class="field select medium"       tabindex="0" data-wufoo-field="dropdown" >
+<option
+value="" >
+<span class="notranslate"></span>
+</option>
+<option
+value="=" >
+<span class="notranslate">=</span>
+</option>
+<option
+value="&gt;=" >
+<span class="notranslate">>=</span>
+</option>
+<option
+value="&gt;" >
+<span class="notranslate">></span>
+</option>
+<option
+value="&amp;lt;=" >
+<span class="notranslate">&lt;=</span>
+</option>
+<option
+value="&amp;lt;" >
+<span class="notranslate">&lt;</span>
+</option>
+<option
+value="Increased" >
+<span class="notranslate">Increased</span>
+</option>
+<option
+value="Increased (%)" >
+<span class="notranslate">Increased (%)</span>
+</option>
+<option
+value="Decreased" >
+<span class="notranslate">Decreased</span>
+</option>
+<option
+value="Decreased (%)" selected="selected">
+<span class="notranslate">Decreased (%)</span>
+</option>
+</select>
+</div>
+</li>
+<li id="foli14" data-wufoo-field data-field-type="text" class="notranslate      ">
+<label class="desc" id="title14" for="Field14">
+Value
+</label>
+<div>
+<input id="Field14" name="Field14" type="text" class="field text medium" value=""       maxLength="255" tabindex="0" onkeyup=""       placeholder="" />
+</div>
+</li><li id="foli15" class="notranslate section      ">
+<section>
+<h3 id="title15">
+Sell Strategy
+</h3>
+<div id="instruct15">Please enter the selling strategy</div>
+</section>
+</li>
+<li id="foli16" class="      " >
+<label class="desc notranslate" id="title16" for="Field16">
+Indicator
+</label>
+<div>
+<select id="Field16" name="Field16" class="field select medium"       tabindex="0" data-wufoo-field="dropdown" >
+<option
+value="" >
+<span class="notranslate"></span>
+</option>
+<option
+value="Current Price" selected="selected">
+<span class="notranslate">Current Price</span>
+</option>
+<option
+value="Second Choice" >
+<span class="notranslate">Second Choice</span>
+</option>
+<option
+value="Third Choice" >
+<span class="notranslate">Third Choice</span>
+</option>
+</select>
+</div>
+</li> 
+
+<li class="buttons ">
+<div>
+    
+                        <input id="saveForm" name="saveForm" class="btTxt submit"
+    type="submit" value="Submit"
+ />    
+
+<li class="hide">
+<label for="comment">Do Not Fill This Out</label>
+<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+<input type="hidden" id="idstamp" name="idstamp" value="aIXJQM7BK33GaDMlAx8h8rHno1rNDqxof6SbjGu18Fg=" >
+<input type="hidden" id="encryptedPassword" name="encryptedPassword" value="" >
+</li>
+</ul>
+</form>
+ 
+
+</div><!--container-->
+
+</body>
+</html>

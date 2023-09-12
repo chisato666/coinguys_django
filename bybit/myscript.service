@@ -1,0 +1,145 @@
+On macOS, you can use the `launchd` system to automatically restart a Python script if it stops running. Here's how to do it:
+
+1. Open a text editor and create a new file with the following contents:
+
+   ```
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>Label</key>
+       <string>com.example.myscript</string>
+       <key>ProgramArguments</key>
+       <array>
+           <string>/usr/bin/python3</string>
+           <string>/path/to/myscript.py</string>
+       </array>
+       <key>KeepAlive</key>
+       <true/>
+   </dict>
+   </plist>
+
+      <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>Label</key>
+       <string>com.example.myscript</string>
+       <key>ProgramArguments</key>
+       <array>
+           <string>/usr/bin/python3</string>
+           <string>/path/to/myscript.py</string>
+       </array>
+       <key>KeepAlive</key>
+       <true/>
+   </dict>
+   </plist>
+   ```
+
+
+If you see this warning message when trying to load a launchd agent on macOS using the command `sudo launchctl load /Library/LaunchAgents/com.example.myscript.plist`, it means that you are trying to load a LaunchAgent as root, which is not recommended.
+
+To avoid this warning, you can use the `launchctl bootstrap` command instead. Here's how:
+
+1. Open a text editor and create a new file with the following contents:
+
+   ```
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>Label</key>
+       <string>com.example.myscript</string>
+       <key>ProgramArguments</key>
+       <array>
+           <string>/usr/bin/python3</string>
+           <string>/path/to/myscript.py</string>
+       </array>
+       <key>KeepAlive</key>
+       <true/>
+   </dict>
+   </plist>
+   ```
+
+   Replace `/path/to/myscript.py` with the actual path to your script.
+
+2. Save the file with a `.plist` extension in the `/Library/LaunchAgents` directory.
+
+3. Open a terminal and run the following command to bootstrap the agent:
+
+   ```
+   sudolaunchctl bootstrap system /Library/LaunchAgents/com.example.myscript.plist
+   ```
+
+   This will start your script as a launchd agent and configure `launchd` to automatically restart it if it stops running for any reason.
+
+Note that `launchd` is a powerful system tool on macOS and you should be careful when using it. Make sure to test your configuration thoroughly and follow best practices for managing launchd agents.
+
+
+   Replace `/path/to/myscript.py` with the actual path to your script.
+
+2. Save the file with a `.plist` extension in the `/Library/LaunchAgents` directory.
+
+3. Open a terminal and run the following command to load the configuration:
+
+   ```
+   sudo launchctl load /Library/LaunchAgents/com.example.myscript.plist
+   ```
+
+   This will start your script as a launchd agent and configure `launchd` to automatically restart it if it stops running for any reason.
+
+Note that `launchd` is a powerful system tool on macOS and you should be careful when using it. Make sure to test your configuration thoroughly and follow best practices for managing launchd agents.
+
+If you want to automatically reload a Python script whenever it stops running, you can use a process manager like `systemd` or a process monitor like `supervisor`.
+
+Here's an example using `systemd`:
+
+1. Create a new service file for your script:
+
+   ```
+   sudo nano /etc/systemd/system/myscript.service
+   ```
+
+2. Paste the following configuration into the file:
+
+   ```
+   [Unit]
+   Description=My Script
+   After=network.target
+
+   [Service]
+   ExecStart=/usr/bin/python3 /path/to/myscript.py
+   Restart=always
+   User=yourusername
+
+   [Install]
+   WantedBy=multi-user.target
+   ```
+
+   Make sure to replace `/path/to/myscript.py` with the actual path to your script, and `yourusername` with your username on the system.
+
+3. Save the file and exit the editor.
+
+4. Reload the systemd daemon to pick up the new service file:
+
+   ```
+   sudo systemctl daemon-reload
+   ```
+
+5. Start the service:
+
+   ```
+   sudo systemctl start myscript.service
+   ```
+
+This will start your script as a service and configure `systemd` to automatically restart it if it stops running for any reason.
+
+You can check the status of the service using the following command:
+
+```
+sudo systemctl status myscript.service
+```
+
+This will display information about the service, including whether it isrunning or not. If the script stops for any reason, `systemd` will automatically restart it.
+
+Note that this is just one example of how to automatically reload a Python script using `systemd`. There are other process managers and monitors available that you can use, each with their own configuration options and advantages.

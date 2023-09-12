@@ -1,0 +1,12 @@
+2022-08-20 22:48:40,089 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2022-08-20 22:48:40,090 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /Users/apple/PycharmProjects/binance/venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2022-08-20 22:48:40,090 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2022-08-20 22:48:40,434 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2022-08-20 22:48:40,683 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2022-08-20 22:48:40,916 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2022-08-20 22:48:41,140 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2022-08-20 22:48:44,018 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2022-08-20 22:48:44,018 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https:\\/\\/i.instagram.com\\/challenge\\/AXH72As2omlQ0fLsHTcYGprFWngZ714ZiUYchfasA-TzdPE0EsbTFre_CRerR2mPyUlU\\/Afzpz3jojodQqWAjN8u6uDLjeDxBPCD2FKzNGibJ3dm2VGa51-BfRIlxmmtCFDOw-t2d4Lxf6AHTPg\\/","api_path":"\\/challenge\\/AXH72As2omlQ0fLsHTcYGprFWngZ714ZiUYchfasA-TzdPE0EsbTFre_CRerR2mPyUlU\\/Afzpz3jojodQqWAjN8u6uDLjeDxBPCD2FKzNGibJ3dm2VGa51-BfRIlxmmtCFDOw-t2d4Lxf6AHTPg\\/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required","exception_name":"ChallengeRequired"}'
+2022-08-20 22:48:44,018 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2022-08-20 22:48:44,018 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2022-08-20 22:48:44,019 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required

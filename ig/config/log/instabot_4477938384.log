@@ -1,0 +1,1132 @@
+2023-04-02 16:26:20,787 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-02 16:26:20,787 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /Users/apple/PycharmProjects/binance/venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2023-04-02 16:26:20,788 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-04-02 16:26:21,123 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-04-02 16:26:21,503 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-02 16:26:22,137 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-04-02 16:26:22,408 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-04-02 16:26:24,768 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [200]>
+2023-04-02 16:26:24,768 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'trendyground'!
+2023-04-02 16:26:24,768 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: True
+2023-04-02 16:26:25,080 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-02 16:26:25,318 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-04-02 16:26:25,532 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: zr/token/result/?device_id=android-6c91715238a02f53&token_hash=&custom_device_id=android-6c91715238a02f53&fetch_reason=token_expired returned response: <Response [200]>
+2023-04-02 16:26:25,763 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: multiple_accounts/get_account_family/ returned response: <Response [200]>
+2023-04-02 16:26:26,098 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-02 16:26:26,382 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: igtv/browse_feed/?prefetch=1 returned response: <Response [404]>
+2023-04-02 16:26:26,382 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'<!DOCTYPE html>\n<html lang="None" class="no-js not-logged-in ">\n    <head>\n        <meta charset="utf-8">\n        <meta http-equiv="X-UA-Compatible" content="IE=edge">\n\n        <title>\n                  Page Not Found &bull; Instagram\n                </title>\n\n        \n        <meta name="robots" content="noimageindex, noarchive">\n        <meta name="apple-mobile-web-app-status-bar-style" content="default">\n        <meta name="mobile-web-app-capable" content="yes">\n        <meta name="theme-color" content="#ffffff">\n        \n        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">\n        <link rel="manifest" href="/data/manifest.json">\n\n        \n        \n        \n\n        <script type="text/javascript">\n        (function() {\n  var docElement = document.documentElement;\n  var classRE = new RegExp(\'(^|\\\\s)no-js(\\\\s|$)\');\n  var className = docElement.className;\n  docElement.className = className.replace(classRE, \'$1js$2\');\n})();\n</script>\n        <script type="text/javascript">\n(function() {\n  if (\'PerformanceObserver\' in window && \'PerformancePaintTiming\' in window) {\n    window.__bufferedPerformance = [];\n    var ob = new PerformanceObserver(function(e) {\n      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());\n    });\n    ob.observe({entryTypes:[\'paint\']});\n  }\n\n  window.__bufferedErrors = [];\n  window.onerror = function(message, url, line, column, error) {\n    window.__bufferedErrors.push({\n      message: message,\n      url: url,\n      line: line,\n      column: column,\n      error: error\n    });\n    return false;\n  };\n  window.__initialData = {\n    pending: true,\n    waiting: []\n  };\n  function asyncFetchSharedData(extra) {\n    var sharedDataReq = new XMLHttpRequest();\n    sharedDataReq.onreadystatechange = function() {\n          if (sharedDataReq.readyState === 4) {\n            if(sharedDataReq.status === 200){\n              var sharedData = JSON.parse(sharedDataReq.responseText);\n              window.__initialDataLoaded(sharedData, extra);\n            }\n          }\n        }\n    sharedDataReq.open(\'GET\', \'/data/shared_data/\', true);\n    sharedDataReq.send(null);\n  }\n  function notifyLoaded(item, data) {\n    item.pending = false;\n    item.data = data;\n    for (var i = 0;i < item.waiting.length; ++i) {\n      item.waiting[i].resolve(item.data);\n    }\n    item.waiting = [];\n  }\n  function notifyError(item, msg) {\n    item.pending = false;\n    item.error = new Error(msg);\n    for (var i = 0;i < item.waiting.length; ++i) {\n      item.waiting[i].reject(item.error);\n    }\n    item.waiting = [];\n  }\n  window.__initialDataLoaded = function(initialData, extraData) {\n    if (extraData) {\n      for (var key in extraData) {\n        initialData[key] = extraData[key];\n      }\n    }\n    notifyLoaded(window.__initialData, initialData);\n  };\n  window.__initialDataError = function(msg) {\n    notifyError(window.__initialData, msg);\n  };\n  window.__additionalData = {};\n  window.__pendingAdditionalData = function(paths) {\n    for (var i = 0;i < paths.length; ++i) {\n      window.__additionalData[paths[i]] = {\n        pending: true,\n        waiting: []\n      };\n    }\n  };\n  window.__additionalDataLoaded = function(path, data) {\n    if (path in window.__additionalData) {\n      notifyLoaded(window.__additionalData[path], data);\n    } else {\n      console.error(\'Unexpected additional data loaded "\' + path + \'"\');\n    }\n  };\n  window.__additionalDataError = function(path, msg) {\n    if (path in window.__additionalData) {\n      notifyError(window.__additionalData[path], msg);\n    } else {\n      console.error(\'Unexpected additional data encountered an error "\' + path + \'": \' + msg);\n    }\n  };\n  \n})();\n</script><script type="text/javascript">\n\n/*\n Copyright 2018 Google Inc. All Rights Reserved.\n Licensed under the Apache License, Version 2.0 (the "License");\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n     http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n*/\n\n(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,\na):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();\n</script>\n                \n                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/666282be8229.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/8a5bd3f267b1.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/68193576ffc5.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/4985e31c9100.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/c06fdb2357bd.png">\n                \n                \n                    \n                        <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">\n                    \n                \n            \n            \n                    \n                        <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">\n                    \n                \n            \n            \n    \n        <style type="text/css">/* @generated \n * DO NOT CHANGE THIS FILE. Instead, modify the non-build version of "main.css"\n * then run "yolo css"\n */\nbody{-webkit-font-smoothing:antialiased;background-color:#fafafa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}.client-root{font-size:14px}a{text-decoration:none}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__,.-cx-PRIVATE-Page__root__{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.-cx-PRIVATE-Page__root__{height:100vh}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.-cx-PRIVATE-Page__main__{margin-top:137px;position:relative}@media screen and (max-width:990px){.-cx-PRIVATE-Page__main__{display:block;margin-top:0}}.-cx-PRIVATE-NavBar__root__{background-color:#fff;border-bottom:1px solid #efefef;height:77px;position:fixed;top:0;width:100%;z-index:100}.-cx-PRIVATE-NavBar__profilePic__{display:none}.-cx-PRIVATE-NavBar__username__{color:#003569;display:inline!important;float:right;font-weight:400;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signIn__{display:inline-block;float:right;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signInText__{color:#003569;font-weight:400}.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup.png/3a62b1a95da3.png);background-size:100%;height:35px;left:16px;position:absolute;text-indent:-9999em;top:6px;width:176px}.-cx-PRIVATE-NavBar__logo__ a{display:block;height:100%;width:100%}@media screen and (-webkit-min-device-pixel-ratio:1.5),screen and (min-resolution:1.5dppx){.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup@2x.png/43608c988939.png)}}.-cx-PRIVATE-NavBar__logoGroup__{left:16px;position:absolute;top:6px}.-cx-PRIVATE-NavBar__logoGroup__ .-cx-PRIVATE-NavBar__logo__{position:static}.-cx-PRIVATE-NavBar__wrapper__{margin:0 auto;max-width:1026px;padding:0 16px;position:relative}.-cx-PRIVATE-NavBar__topBarActions__,.-cx-PRIVATE-SidebarLayout__content__ li{list-style:none}.-cx-PRIVATE-NavBar__dropdown__,.-cx-PRIVATE-NavBar__topBarLeft__,.-cx-PRIVATE-SidebarLayout__content__ .separator,.-cx-PRIVATE-SidebarLayout__content__ .subtitle{display:none}.-cx-PRIVATE-SidebarLayout__content__{border-right:1px solid #efefef;height:100%;width:220px}.-cx-PRIVATE-SidebarLayout__content__ ul{margin:0;padding:0}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__content__{margin:0 px;border:0;width:100%}.-cx-PRIVATE-SidebarLayout__content__ ul{display:none}}.-cx-PRIVATE-SidebarLayout__root__{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;pointer-events:none;position:absolute;width:100%;z-index:1}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__root__{height:auto;padding-bottom:0;padding-top:78px;position:static}}.-cx-PRIVATE-SidebarLayout__contentWrapper__,.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;margin:0 auto;position:relative;width:992px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__navWrapper__{height:100%}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:auto;min-height:0;padding:0;width:100%}}.-cx-PRIVATE-SidebarLayout__nav__{float:left;height:100%;padding-right:0;pointer-events:initial;width:256px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__nav__{float:none;display:block;margin:0!important;background:0 0;border:0;width:100%}}.-cx-PRIVATE-SidebarLayout__contentWrapper__{background-color:#fff;border:1px solid #efefef;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px 20px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{border:1px solid #efefef;border-radius:3px}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.-cx-PRIVATE-SidebarLayout__pageContent__ .-cx-PRIVATE-SidebarLayout__contentWrapper__{padding:0 10px}}.-cx-PRIVATE-SidebarLayout__pageContent__{color:#262626;margin-left:205px;padding:30px 50px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__pageContent__{margin-left:0;margin-right:0;padding:20px 0}}.-cx-PRIVATE-SidebarLayout__pageContent__>:first-child{margin-top:0}.-cx-PRIVATE-SidebarLayout__pageContent__ a{color:#003569}.-cx-PRIVATE-SidebarLayout__pageContent__ h1{font-size:32px;font-weight:400;margin-bottom:20px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h2{font-size:24px;font-weight:400;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h3{font-weight:600;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ li{padding-left:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ li:not(:first-child){margin-top:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ pre{white-space:pre-wrap}.-cx-PRIVATE-Navigation__header__{color:#999;font-size:16px;font-weight:initial;margin:0;padding:16px;text-transform:uppercase}@media screen and (max-width:990px){.-cx-PRIVATE-Navigation__header__:first-child{display:block}.-cx-PRIVATE-Navigation__header__:not(:first-child){display:none}.-cx-PRIVATE-Navigation__header__ i{float:left;width:22px;height:18px;margin-right:8px;margin-left:10px;background:url(/static/images/glyphs/disclosure-down@2x.png/9ae8409fbb3a.png) no-repeat center;background-size:14px 14px}.-cx-PRIVATE-SidebarLayout__content__.active .-cx-PRIVATE-Navigation__header__ i{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}.-cx-PRIVATE-Navigation__navLink__,.-cx-PRIVATE-Navigation__navLink__:active,.-cx-PRIVATE-Navigation__navLink__:hover,.-cx-PRIVATE-Navigation__navLink__:visited{border-left:2px solid transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:#262626;font-size:16px;display:block;padding:16px 16px 16px 30px;width:100%}.-cx-PRIVATE-Navigation__navLink__:hover{border-left-color:#dbdbdb}.-cx-PRIVATE-Navigation__active__ .-cx-PRIVATE-Navigation__navLink__{border-left-color:#262626;font-weight:600}.-cx-PRIVATE-Footer__root__{font-size:12px;height:77px}.-cx-PRIVATE-Footer__copyright__{color:#262626;display:inline-block;float:right;font-weight:600;margin-top:20px;text-transform:uppercase}.-cx-PRIVATE-Footer__nav__{display:inline-block}@media screen and (max-width:990px){.-cx-PRIVATE-Footer__copyright__{text-align:center;width:100%}}.-cx-PRIVATE-Footer__navItems__{margin:20px 0;padding:0;text-align:center}.-cx-PRIVATE-Footer__navItems__ li{display:inline-block;list-style:none}.-cx-PRIVATE-Footer__navItems__ li:not(:first-child){margin-left:15px}.-cx-PRIVATE-Footer__navItems__ a,.-cx-PRIVATE-Footer__navItems__ a:active,.-cx-PRIVATE-Footer__navItems__ a:focus,.-cx-PRIVATE-Footer__navItems__ a:hover,.-cx-PRIVATE-Footer__navItems__ a:visited{color:#003569;font-weight:600;text-transform:uppercase}.-cx-PRIVATE-Footer__wrapper__{margin-left:auto;margin-right:auto;max-width:1026px;padding:0 20px}.-cx-PRIVATE-ErrorPage__errorContainer__{text-align:center}@media (max-width:990px){.-cx-PRIVATE-ErrorPage__errorContainer__{padding:100px 40px 0}}.-cx-PRIVATE-ErrorPage__errorContainer__ a,.-cx-PRIVATE-ErrorPage__errorContainer__ a:visited{color:#003569}.-cx-PRIVATE-Linkshim__followLink__{background-color:#fff;color:#3897f0;border:1px solid #3897f0;border-radius:3px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:8px;font:inherit;font-weight:700;width:90%}@media (min-width:736px){.-cx-PRIVATE-Linkshim__followLink__{width:10%}}.-cx-PRIVATE-Linkshim__followLink__:active{opacity:.5}.-cx-PRIVATE-Linkshim__followLink__:focus{color:#1372cc;border:1px solid #1372cc}.-cx-PRIVATE-GatedContentPage__userAvatarContainer__{height:70px;text-align:center}.-cx-PRIVATE-GatedContentPage__userAvatar__{border-radius:50%;height:100%;width:auto}</style>\n    \n\n            \n    <script type="text/javascript" src="/static/scripts/jquery.js/a4e77326039e.js" crossorigin="anonymous"></script>\n    <script type="text/javascript" src="/static/scripts/bluebar.js/203583927eba.js" crossorigin="anonymous"></script>\n</head>\n    <body class=" p-error dialog-404" style="">\n        \n            <div class="root -cx-PRIVATE-Page__root -cx-PRIVATE-Page__root__">\n                \n                    <div class="page -cx-PRIVATE-Page__body -cx-PRIVATE-Page__body__">\n                        \n                            \n                                <header class="top-bar top-bar-new -cx-PRIVATE-NavBar__root -cx-PRIVATE-NavBar__root__">\n    <div class="top-bar-wrapper -cx-PRIVATE-NavBar__wrapper -cx-PRIVATE-NavBar__wrapper__">\n        <div class="logo -cx-PRIVATE-NavBar__logo -cx-PRIVATE-NavBar__logo__"><a href="/">Instagram</a></div>\n\n        <div class="top-bar-left -cx-PRIVATE-NavBar__topBarLeft -cx-PRIVATE-NavBar__topBarLeft__">\n            <ul class="top-bar-actions">\n                <li>\n                    <a class="top-bar-home" href="/" label=Home><i></i></a>\n                </li>\n            </ul>\n        </div>\n\n        \n            <div class="top-bar-right account-state" id="top_bar_right">\n                <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions -cx-PRIVATE-NavBar__topBarActions__">\n                    \n                    \n                      \n                      <li id="link_profile" class="link-signin -cx-PRIVATE-NavBar__signIn -cx-PRIVATE-NavBar__signIn__">\n                          <a href="/accounts/login/" class="loginLink">\n                              <i></i>\n                              <strong class="-cx-PRIVATE-NavBar__signInText -cx-PRIVATE-NavBar__signInText__">Log in</strong>\n                          </a>\n                      </li>\n                      \n                    \n                </ul>\n            </div>\n        \n    </div>\n</header> <!-- .top-bar -->\n                            \n                        \n\n                        \n                        <div class="main -cx-PRIVATE-Page__main -cx-PRIVATE-Page__main__">\n                            \n    <div class="error-container -cx-PRIVATE-ErrorPage__errorContainer -cx-PRIVATE-ErrorPage__errorContainer__">\n    \n\n    <h2>Sorry, this page isn&#39;t available.</h2>\n\n    <p>\n        The link you followed may be broken, or the page may have been removed.\n        <a href="/">Go back to Instagram.</a>\n    </p>\n\n\n\n    </div>\n\n                        </div> <!-- .main -->\n                        \n\n                    </div> <!-- .page -->\n\n                    \n                    <footer class="page-footer -cx-PRIVATE-Footer__root -cx-PRIVATE-Footer__root__" role="contentinfo">\n                        <div class="wrapper -cx-PRIVATE-Footer__wrapper -cx-PRIVATE-Footer__wrapper__">\n                            <nav class="-cx-PRIVATE-Footer__nav -cx-PRIVATE-Footer__nav__">\n                                <ul class="-cx-PRIVATE-Footer__navItems -cx-PRIVATE-Footer__navItems__">\n                                    <li><a href="/about/us/">About us</a></li>\n                                    <li><a href="https://help.instagram.com/">Support</a></li>\n                                    <li><a href="https://about.instagram.com/blog/">Press</a></li>\n                                    <li><a href="/developer/">API</a></li>\n                                    <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>\n                                    <li><a href="/legal/privacy/">Privacy</a></li>\n                                    <li><a href="/legal/terms/">\n                                      \n                                          Terms\n                                      \n                                    </a></li>\n                                    \n                                </ul>\n                            </nav>\n\n                            <p class="copyright -cx-PRIVATE-Footer__copyright -cx-PRIVATE-Footer__copyright__">&copy; 2023 Instagram</p>\n                        </div>\n                    </footer>\n                    \n                \n                <div id="reactModalMountPoint"></div>\n            </div> <!-- .root -->\n        \n        \n\n\n        \n            \n\n            \n        \n\n        <script type="text/javascript">\n(function(){\n  function normalizeError(err) {\n    var errorInfo = err.error || {};\n    var getConfigProp = function(propName, defaultValueIfNotTruthy) {\n      var propValue = window._sharedData && window._sharedData[propName];\n      return propValue ? propValue : defaultValueIfNotTruthy;\n    };\n    var windowUrl = window.location.href;\n    var errUrl = err.url || windowUrl;\n    return {\n      line: err.line || errorInfo.message || 0,\n      column: err.column || 0,\n      name: \'InitError\',\n      message: err.message || errorInfo.message || \'\',\n      script: errorInfo.script || \'\',\n      stack: errorInfo.stackTrace || errorInfo.stack || \'\',\n      timestamp: Date.now(),\n      ref: windowUrl.indexOf(\'direct\') >= 0 ? \'direct\' : windowUrl,\n      deployment_stage: getConfigProp(\'deployment_stage\', \'\'),\n      frontend_env: getConfigProp(\'frontend_env\', \'prod\'),\n      rollout_hash: getConfigProp(\'rollout_hash\', \'\'),\n      is_prerelease: window.__PRERELEASE__ || false,\n      bundle_variant: getConfigProp(\'bundle_variant\', null),\n      request_url: errUrl.indexOf(\'direct\') >= 0 ? \'direct\' : errUrl,\n      response_status_code: errorInfo.statusCode || 0\n    }\n  }\n  window.addEventListener(\'load\', function(){\n    if (window.__bufferedErrors && window.__bufferedErrors.length) {\n      if (window.caches && window.caches.keys && window.caches.delete) {\n        window.caches.keys().then(function(keys) {\n          keys.forEach(function(key) {\n            window.caches.delete(key)\n          })\n        })\n      }\n      window.__bufferedErrors.map(function(error) {\n        return normalizeError(error)\n      }).forEach(function(normalizedError) {\n        var request = new XMLHttpRequest();\n        request.open(\'POST\', \'/client_error/\', true);\n        request.setRequestHeader(\'Content-Type\', \'application/json; charset=utf-8\');\n        request.send(JSON.stringify(normalizedError));\n      })\n    }\n  })\n}());\n</script>\n    </body>\n</html>\n'
+2023-04-02 16:26:26,383 - instabot version: 0.117.0 (api) - ERROR - Error checking for `feedback_required`, response text is not JSON
+2023-04-02 16:26:26,383 - instabot version: 0.117.0 (api) - INFO - Full Response: <Response [404]>
+2023-04-02 16:26:26,383 - instabot version: 0.117.0 (api) - INFO - Response Text: <!DOCTYPE html>
+<html lang="None" class="no-js not-logged-in ">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>
+                  Page Not Found &bull; Instagram
+                </title>
+
+        
+        <meta name="robots" content="noimageindex, noarchive">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#ffffff">
+        
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link rel="manifest" href="/data/manifest.json">
+
+        
+        
+        
+
+        <script type="text/javascript">
+        (function() {
+  var docElement = document.documentElement;
+  var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
+  var className = docElement.className;
+  docElement.className = className.replace(classRE, '$1js$2');
+})();
+</script>
+        <script type="text/javascript">
+(function() {
+  if ('PerformanceObserver' in window && 'PerformancePaintTiming' in window) {
+    window.__bufferedPerformance = [];
+    var ob = new PerformanceObserver(function(e) {
+      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());
+    });
+    ob.observe({entryTypes:['paint']});
+  }
+
+  window.__bufferedErrors = [];
+  window.onerror = function(message, url, line, column, error) {
+    window.__bufferedErrors.push({
+      message: message,
+      url: url,
+      line: line,
+      column: column,
+      error: error
+    });
+    return false;
+  };
+  window.__initialData = {
+    pending: true,
+    waiting: []
+  };
+  function asyncFetchSharedData(extra) {
+    var sharedDataReq = new XMLHttpRequest();
+    sharedDataReq.onreadystatechange = function() {
+          if (sharedDataReq.readyState === 4) {
+            if(sharedDataReq.status === 200){
+              var sharedData = JSON.parse(sharedDataReq.responseText);
+              window.__initialDataLoaded(sharedData, extra);
+            }
+          }
+        }
+    sharedDataReq.open('GET', '/data/shared_data/', true);
+    sharedDataReq.send(null);
+  }
+  function notifyLoaded(item, data) {
+    item.pending = false;
+    item.data = data;
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].resolve(item.data);
+    }
+    item.waiting = [];
+  }
+  function notifyError(item, msg) {
+    item.pending = false;
+    item.error = new Error(msg);
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].reject(item.error);
+    }
+    item.waiting = [];
+  }
+  window.__initialDataLoaded = function(initialData, extraData) {
+    if (extraData) {
+      for (var key in extraData) {
+        initialData[key] = extraData[key];
+      }
+    }
+    notifyLoaded(window.__initialData, initialData);
+  };
+  window.__initialDataError = function(msg) {
+    notifyError(window.__initialData, msg);
+  };
+  window.__additionalData = {};
+  window.__pendingAdditionalData = function(paths) {
+    for (var i = 0;i < paths.length; ++i) {
+      window.__additionalData[paths[i]] = {
+        pending: true,
+        waiting: []
+      };
+    }
+  };
+  window.__additionalDataLoaded = function(path, data) {
+    if (path in window.__additionalData) {
+      notifyLoaded(window.__additionalData[path], data);
+    } else {
+      console.error('Unexpected additional data loaded "' + path + '"');
+    }
+  };
+  window.__additionalDataError = function(path, msg) {
+    if (path in window.__additionalData) {
+      notifyError(window.__additionalData[path], msg);
+    } else {
+      console.error('Unexpected additional data encountered an error "' + path + '": ' + msg);
+    }
+  };
+  
+})();
+</script><script type="text/javascript">
+
+/*
+ Copyright 2018 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,
+a):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();
+</script>
+                
+                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/666282be8229.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/8a5bd3f267b1.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/68193576ffc5.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/4985e31c9100.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/c06fdb2357bd.png">
+                
+                
+                    
+                        <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">
+                    
+                
+            
+            
+                    
+                        <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">
+                    
+                
+            
+            
+    
+        <style type="text/css">/* @generated 
+ * DO NOT CHANGE THIS FILE. Instead, modify the non-build version of "main.css"
+ * then run "yolo css"
+ */
+body{-webkit-font-smoothing:antialiased;background-color:#fafafa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}.client-root{font-size:14px}a{text-decoration:none}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__,.-cx-PRIVATE-Page__root__{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.-cx-PRIVATE-Page__root__{height:100vh}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.-cx-PRIVATE-Page__main__{margin-top:137px;position:relative}@media screen and (max-width:990px){.-cx-PRIVATE-Page__main__{display:block;margin-top:0}}.-cx-PRIVATE-NavBar__root__{background-color:#fff;border-bottom:1px solid #efefef;height:77px;position:fixed;top:0;width:100%;z-index:100}.-cx-PRIVATE-NavBar__profilePic__{display:none}.-cx-PRIVATE-NavBar__username__{color:#003569;display:inline!important;float:right;font-weight:400;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signIn__{display:inline-block;float:right;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signInText__{color:#003569;font-weight:400}.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup.png/3a62b1a95da3.png);background-size:100%;height:35px;left:16px;position:absolute;text-indent:-9999em;top:6px;width:176px}.-cx-PRIVATE-NavBar__logo__ a{display:block;height:100%;width:100%}@media screen and (-webkit-min-device-pixel-ratio:1.5),screen and (min-resolution:1.5dppx){.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup@2x.png/43608c988939.png)}}.-cx-PRIVATE-NavBar__logoGroup__{left:16px;position:absolute;top:6px}.-cx-PRIVATE-NavBar__logoGroup__ .-cx-PRIVATE-NavBar__logo__{position:static}.-cx-PRIVATE-NavBar__wrapper__{margin:0 auto;max-width:1026px;padding:0 16px;position:relative}.-cx-PRIVATE-NavBar__topBarActions__,.-cx-PRIVATE-SidebarLayout__content__ li{list-style:none}.-cx-PRIVATE-NavBar__dropdown__,.-cx-PRIVATE-NavBar__topBarLeft__,.-cx-PRIVATE-SidebarLayout__content__ .separator,.-cx-PRIVATE-SidebarLayout__content__ .subtitle{display:none}.-cx-PRIVATE-SidebarLayout__content__{border-right:1px solid #efefef;height:100%;width:220px}.-cx-PRIVATE-SidebarLayout__content__ ul{margin:0;padding:0}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__content__{margin:0 px;border:0;width:100%}.-cx-PRIVATE-SidebarLayout__content__ ul{display:none}}.-cx-PRIVATE-SidebarLayout__root__{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;pointer-events:none;position:absolute;width:100%;z-index:1}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__root__{height:auto;padding-bottom:0;padding-top:78px;position:static}}.-cx-PRIVATE-SidebarLayout__contentWrapper__,.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;margin:0 auto;position:relative;width:992px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__navWrapper__{height:100%}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:auto;min-height:0;padding:0;width:100%}}.-cx-PRIVATE-SidebarLayout__nav__{float:left;height:100%;padding-right:0;pointer-events:initial;width:256px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__nav__{float:none;display:block;margin:0!important;background:0 0;border:0;width:100%}}.-cx-PRIVATE-SidebarLayout__contentWrapper__{background-color:#fff;border:1px solid #efefef;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px 20px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{border:1px solid #efefef;border-radius:3px}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.-cx-PRIVATE-SidebarLayout__pageContent__ .-cx-PRIVATE-SidebarLayout__contentWrapper__{padding:0 10px}}.-cx-PRIVATE-SidebarLayout__pageContent__{color:#262626;margin-left:205px;padding:30px 50px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__pageContent__{margin-left:0;margin-right:0;padding:20px 0}}.-cx-PRIVATE-SidebarLayout__pageContent__>:first-child{margin-top:0}.-cx-PRIVATE-SidebarLayout__pageContent__ a{color:#003569}.-cx-PRIVATE-SidebarLayout__pageContent__ h1{font-size:32px;font-weight:400;margin-bottom:20px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h2{font-size:24px;font-weight:400;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h3{font-weight:600;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ li{padding-left:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ li:not(:first-child){margin-top:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ pre{white-space:pre-wrap}.-cx-PRIVATE-Navigation__header__{color:#999;font-size:16px;font-weight:initial;margin:0;padding:16px;text-transform:uppercase}@media screen and (max-width:990px){.-cx-PRIVATE-Navigation__header__:first-child{display:block}.-cx-PRIVATE-Navigation__header__:not(:first-child){display:none}.-cx-PRIVATE-Navigation__header__ i{float:left;width:22px;height:18px;margin-right:8px;margin-left:10px;background:url(/static/images/glyphs/disclosure-down@2x.png/9ae8409fbb3a.png) no-repeat center;background-size:14px 14px}.-cx-PRIVATE-SidebarLayout__content__.active .-cx-PRIVATE-Navigation__header__ i{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}.-cx-PRIVATE-Navigation__navLink__,.-cx-PRIVATE-Navigation__navLink__:active,.-cx-PRIVATE-Navigation__navLink__:hover,.-cx-PRIVATE-Navigation__navLink__:visited{border-left:2px solid transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:#262626;font-size:16px;display:block;padding:16px 16px 16px 30px;width:100%}.-cx-PRIVATE-Navigation__navLink__:hover{border-left-color:#dbdbdb}.-cx-PRIVATE-Navigation__active__ .-cx-PRIVATE-Navigation__navLink__{border-left-color:#262626;font-weight:600}.-cx-PRIVATE-Footer__root__{font-size:12px;height:77px}.-cx-PRIVATE-Footer__copyright__{color:#262626;display:inline-block;float:right;font-weight:600;margin-top:20px;text-transform:uppercase}.-cx-PRIVATE-Footer__nav__{display:inline-block}@media screen and (max-width:990px){.-cx-PRIVATE-Footer__copyright__{text-align:center;width:100%}}.-cx-PRIVATE-Footer__navItems__{margin:20px 0;padding:0;text-align:center}.-cx-PRIVATE-Footer__navItems__ li{display:inline-block;list-style:none}.-cx-PRIVATE-Footer__navItems__ li:not(:first-child){margin-left:15px}.-cx-PRIVATE-Footer__navItems__ a,.-cx-PRIVATE-Footer__navItems__ a:active,.-cx-PRIVATE-Footer__navItems__ a:focus,.-cx-PRIVATE-Footer__navItems__ a:hover,.-cx-PRIVATE-Footer__navItems__ a:visited{color:#003569;font-weight:600;text-transform:uppercase}.-cx-PRIVATE-Footer__wrapper__{margin-left:auto;margin-right:auto;max-width:1026px;padding:0 20px}.-cx-PRIVATE-ErrorPage__errorContainer__{text-align:center}@media (max-width:990px){.-cx-PRIVATE-ErrorPage__errorContainer__{padding:100px 40px 0}}.-cx-PRIVATE-ErrorPage__errorContainer__ a,.-cx-PRIVATE-ErrorPage__errorContainer__ a:visited{color:#003569}.-cx-PRIVATE-Linkshim__followLink__{background-color:#fff;color:#3897f0;border:1px solid #3897f0;border-radius:3px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:8px;font:inherit;font-weight:700;width:90%}@media (min-width:736px){.-cx-PRIVATE-Linkshim__followLink__{width:10%}}.-cx-PRIVATE-Linkshim__followLink__:active{opacity:.5}.-cx-PRIVATE-Linkshim__followLink__:focus{color:#1372cc;border:1px solid #1372cc}.-cx-PRIVATE-GatedContentPage__userAvatarContainer__{height:70px;text-align:center}.-cx-PRIVATE-GatedContentPage__userAvatar__{border-radius:50%;height:100%;width:auto}</style>
+    
+
+            
+    <script type="text/javascript" src="/static/scripts/jquery.js/a4e77326039e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/scripts/bluebar.js/203583927eba.js" crossorigin="anonymous"></script>
+</head>
+    <body class=" p-error dialog-404" style="">
+        
+            <div class="root -cx-PRIVATE-Page__root -cx-PRIVATE-Page__root__">
+                
+                    <div class="page -cx-PRIVATE-Page__body -cx-PRIVATE-Page__body__">
+                        
+                            
+                                <header class="top-bar top-bar-new -cx-PRIVATE-NavBar__root -cx-PRIVATE-NavBar__root__">
+    <div class="top-bar-wrapper -cx-PRIVATE-NavBar__wrapper -cx-PRIVATE-NavBar__wrapper__">
+        <div class="logo -cx-PRIVATE-NavBar__logo -cx-PRIVATE-NavBar__logo__"><a href="/">Instagram</a></div>
+
+        <div class="top-bar-left -cx-PRIVATE-NavBar__topBarLeft -cx-PRIVATE-NavBar__topBarLeft__">
+            <ul class="top-bar-actions">
+                <li>
+                    <a class="top-bar-home" href="/" label=Home><i></i></a>
+                </li>
+            </ul>
+        </div>
+
+        
+            <div class="top-bar-right account-state" id="top_bar_right">
+                <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions -cx-PRIVATE-NavBar__topBarActions__">
+                    
+                    
+                      
+                      <li id="link_profile" class="link-signin -cx-PRIVATE-NavBar__signIn -cx-PRIVATE-NavBar__signIn__">
+                          <a href="/accounts/login/" class="loginLink">
+                              <i></i>
+                              <strong class="-cx-PRIVATE-NavBar__signInText -cx-PRIVATE-NavBar__signInText__">Log in</strong>
+                          </a>
+                      </li>
+                      
+                    
+                </ul>
+            </div>
+        
+    </div>
+</header> <!-- .top-bar -->
+                            
+                        
+
+                        
+                        <div class="main -cx-PRIVATE-Page__main -cx-PRIVATE-Page__main__">
+                            
+    <div class="error-container -cx-PRIVATE-ErrorPage__errorContainer -cx-PRIVATE-ErrorPage__errorContainer__">
+    
+
+    <h2>Sorry, this page isn&#39;t available.</h2>
+
+    <p>
+        The link you followed may be broken, or the page may have been removed.
+        <a href="/">Go back to Instagram.</a>
+    </p>
+
+
+
+    </div>
+
+                        </div> <!-- .main -->
+                        
+
+                    </div> <!-- .page -->
+
+                    
+                    <footer class="page-footer -cx-PRIVATE-Footer__root -cx-PRIVATE-Footer__root__" role="contentinfo">
+                        <div class="wrapper -cx-PRIVATE-Footer__wrapper -cx-PRIVATE-Footer__wrapper__">
+                            <nav class="-cx-PRIVATE-Footer__nav -cx-PRIVATE-Footer__nav__">
+                                <ul class="-cx-PRIVATE-Footer__navItems -cx-PRIVATE-Footer__navItems__">
+                                    <li><a href="/about/us/">About us</a></li>
+                                    <li><a href="https://help.instagram.com/">Support</a></li>
+                                    <li><a href="https://about.instagram.com/blog/">Press</a></li>
+                                    <li><a href="/developer/">API</a></li>
+                                    <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>
+                                    <li><a href="/legal/privacy/">Privacy</a></li>
+                                    <li><a href="/legal/terms/">
+                                      
+                                          Terms
+                                      
+                                    </a></li>
+                                    
+                                </ul>
+                            </nav>
+
+                            <p class="copyright -cx-PRIVATE-Footer__copyright -cx-PRIVATE-Footer__copyright__">&copy; 2023 Instagram</p>
+                        </div>
+                    </footer>
+                    
+                
+                <div id="reactModalMountPoint"></div>
+            </div> <!-- .root -->
+        
+        
+
+
+        
+            
+
+            
+        
+
+        <script type="text/javascript">
+(function(){
+  function normalizeError(err) {
+    var errorInfo = err.error || {};
+    var getConfigProp = function(propName, defaultValueIfNotTruthy) {
+      var propValue = window._sharedData && window._sharedData[propName];
+      return propValue ? propValue : defaultValueIfNotTruthy;
+    };
+    var windowUrl = window.location.href;
+    var errUrl = err.url || windowUrl;
+    return {
+      line: err.line || errorInfo.message || 0,
+      column: err.column || 0,
+      name: 'InitError',
+      message: err.message || errorInfo.message || '',
+      script: errorInfo.script || '',
+      stack: errorInfo.stackTrace || errorInfo.stack || '',
+      timestamp: Date.now(),
+      ref: windowUrl.indexOf('direct') >= 0 ? 'direct' : windowUrl,
+      deployment_stage: getConfigProp('deployment_stage', ''),
+      frontend_env: getConfigProp('frontend_env', 'prod'),
+      rollout_hash: getConfigProp('rollout_hash', ''),
+      is_prerelease: window.__PRERELEASE__ || false,
+      bundle_variant: getConfigProp('bundle_variant', null),
+      request_url: errUrl.indexOf('direct') >= 0 ? 'direct' : errUrl,
+      response_status_code: errorInfo.statusCode || 0
+    }
+  }
+  window.addEventListener('load', function(){
+    if (window.__bufferedErrors && window.__bufferedErrors.length) {
+      if (window.caches && window.caches.keys && window.caches.delete) {
+        window.caches.keys().then(function(keys) {
+          keys.forEach(function(key) {
+            window.caches.delete(key)
+          })
+        })
+      }
+      window.__bufferedErrors.map(function(error) {
+        return normalizeError(error)
+      }).forEach(function(normalizedError) {
+        var request = new XMLHttpRequest();
+        request.open('POST', '/client_error/', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        request.send(JSON.stringify(normalizedError));
+      })
+    }
+  })
+}());
+</script>
+    </body>
+</html>
+
+2023-04-02 16:26:26,383 - instabot version: 0.117.0 (api) - ERROR - Error unknown send request
+2023-04-02 16:26:26,589 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: creatives/ar_class/ returned response: <Response [200]>
+2023-04-02 16:26:27,324 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2023-04-02 16:26:28,966 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2023-04-02 16:26:29,170 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: media/blocked/ returned response: <Response [200]>
+2023-04-02 16:26:29,845 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/ returned response: <Response [200]>
+2023-04-02 16:26:30,092 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: loom/fetch_config/ returned response: <Response [200]>
+2023-04-02 16:26:30,996 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: scores/bootstrap/users/?surfaces=["autocomplete_user_list","coefficient_besties_list_ranking","coefficient_rank_recipient_user_suggestion","coefficient_ios_section_test_bootstrap_ranking","coefficient_direct_recipients_ranking_variant_2"] returned response: <Response [200]>
+2023-04-02 16:26:31,236 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: business/eligibility/get_monetization_products_eligibility_data/?product_types=branded_content returned response: <Response [200]>
+2023-04-02 16:26:31,447 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: business/branded_content/should_require_professional_account/ returned response: <Response [200]>
+2023-04-02 16:26:31,666 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: linked_accounts/get_linkage_status/ returned response: <Response [200]>
+2023-04-02 16:26:31,882 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: locations/request_country/ returned response: <Response [404]>
+2023-04-02 16:26:31,882 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'<!DOCTYPE html>\n<html lang="None" class="no-js not-logged-in ">\n    <head>\n        <meta charset="utf-8">\n        <meta http-equiv="X-UA-Compatible" content="IE=edge">\n\n        <title>\n                  Page Not Found &bull; Instagram\n                </title>\n\n        \n        <meta name="robots" content="noimageindex, noarchive">\n        <meta name="apple-mobile-web-app-status-bar-style" content="default">\n        <meta name="mobile-web-app-capable" content="yes">\n        <meta name="theme-color" content="#ffffff">\n        \n        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">\n        <link rel="manifest" href="/data/manifest.json">\n\n        \n        \n        \n\n        <script type="text/javascript">\n        (function() {\n  var docElement = document.documentElement;\n  var classRE = new RegExp(\'(^|\\\\s)no-js(\\\\s|$)\');\n  var className = docElement.className;\n  docElement.className = className.replace(classRE, \'$1js$2\');\n})();\n</script>\n        <script type="text/javascript">\n(function() {\n  if (\'PerformanceObserver\' in window && \'PerformancePaintTiming\' in window) {\n    window.__bufferedPerformance = [];\n    var ob = new PerformanceObserver(function(e) {\n      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());\n    });\n    ob.observe({entryTypes:[\'paint\']});\n  }\n\n  window.__bufferedErrors = [];\n  window.onerror = function(message, url, line, column, error) {\n    window.__bufferedErrors.push({\n      message: message,\n      url: url,\n      line: line,\n      column: column,\n      error: error\n    });\n    return false;\n  };\n  window.__initialData = {\n    pending: true,\n    waiting: []\n  };\n  function asyncFetchSharedData(extra) {\n    var sharedDataReq = new XMLHttpRequest();\n    sharedDataReq.onreadystatechange = function() {\n          if (sharedDataReq.readyState === 4) {\n            if(sharedDataReq.status === 200){\n              var sharedData = JSON.parse(sharedDataReq.responseText);\n              window.__initialDataLoaded(sharedData, extra);\n            }\n          }\n        }\n    sharedDataReq.open(\'GET\', \'/data/shared_data/\', true);\n    sharedDataReq.send(null);\n  }\n  function notifyLoaded(item, data) {\n    item.pending = false;\n    item.data = data;\n    for (var i = 0;i < item.waiting.length; ++i) {\n      item.waiting[i].resolve(item.data);\n    }\n    item.waiting = [];\n  }\n  function notifyError(item, msg) {\n    item.pending = false;\n    item.error = new Error(msg);\n    for (var i = 0;i < item.waiting.length; ++i) {\n      item.waiting[i].reject(item.error);\n    }\n    item.waiting = [];\n  }\n  window.__initialDataLoaded = function(initialData, extraData) {\n    if (extraData) {\n      for (var key in extraData) {\n        initialData[key] = extraData[key];\n      }\n    }\n    notifyLoaded(window.__initialData, initialData);\n  };\n  window.__initialDataError = function(msg) {\n    notifyError(window.__initialData, msg);\n  };\n  window.__additionalData = {};\n  window.__pendingAdditionalData = function(paths) {\n    for (var i = 0;i < paths.length; ++i) {\n      window.__additionalData[paths[i]] = {\n        pending: true,\n        waiting: []\n      };\n    }\n  };\n  window.__additionalDataLoaded = function(path, data) {\n    if (path in window.__additionalData) {\n      notifyLoaded(window.__additionalData[path], data);\n    } else {\n      console.error(\'Unexpected additional data loaded "\' + path + \'"\');\n    }\n  };\n  window.__additionalDataError = function(path, msg) {\n    if (path in window.__additionalData) {\n      notifyError(window.__additionalData[path], msg);\n    } else {\n      console.error(\'Unexpected additional data encountered an error "\' + path + \'": \' + msg);\n    }\n  };\n  \n})();\n</script><script type="text/javascript">\n\n/*\n Copyright 2018 Google Inc. All Rights Reserved.\n Licensed under the Apache License, Version 2.0 (the "License");\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n     http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n*/\n\n(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,\na):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();\n</script>\n                \n                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/666282be8229.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/8a5bd3f267b1.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/68193576ffc5.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/4985e31c9100.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/c06fdb2357bd.png">\n                \n                \n                    \n                        <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">\n                    \n                \n            \n            \n                    \n                        <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">\n                    \n                \n            \n            \n    \n        <style type="text/css">/* @generated \n * DO NOT CHANGE THIS FILE. Instead, modify the non-build version of "main.css"\n * then run "yolo css"\n */\nbody{-webkit-font-smoothing:antialiased;background-color:#fafafa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}.client-root{font-size:14px}a{text-decoration:none}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__,.-cx-PRIVATE-Page__root__{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.-cx-PRIVATE-Page__root__{height:100vh}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.-cx-PRIVATE-Page__main__{margin-top:137px;position:relative}@media screen and (max-width:990px){.-cx-PRIVATE-Page__main__{display:block;margin-top:0}}.-cx-PRIVATE-NavBar__root__{background-color:#fff;border-bottom:1px solid #efefef;height:77px;position:fixed;top:0;width:100%;z-index:100}.-cx-PRIVATE-NavBar__profilePic__{display:none}.-cx-PRIVATE-NavBar__username__{color:#003569;display:inline!important;float:right;font-weight:400;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signIn__{display:inline-block;float:right;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signInText__{color:#003569;font-weight:400}.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup.png/3a62b1a95da3.png);background-size:100%;height:35px;left:16px;position:absolute;text-indent:-9999em;top:6px;width:176px}.-cx-PRIVATE-NavBar__logo__ a{display:block;height:100%;width:100%}@media screen and (-webkit-min-device-pixel-ratio:1.5),screen and (min-resolution:1.5dppx){.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup@2x.png/43608c988939.png)}}.-cx-PRIVATE-NavBar__logoGroup__{left:16px;position:absolute;top:6px}.-cx-PRIVATE-NavBar__logoGroup__ .-cx-PRIVATE-NavBar__logo__{position:static}.-cx-PRIVATE-NavBar__wrapper__{margin:0 auto;max-width:1026px;padding:0 16px;position:relative}.-cx-PRIVATE-NavBar__topBarActions__,.-cx-PRIVATE-SidebarLayout__content__ li{list-style:none}.-cx-PRIVATE-NavBar__dropdown__,.-cx-PRIVATE-NavBar__topBarLeft__,.-cx-PRIVATE-SidebarLayout__content__ .separator,.-cx-PRIVATE-SidebarLayout__content__ .subtitle{display:none}.-cx-PRIVATE-SidebarLayout__content__{border-right:1px solid #efefef;height:100%;width:220px}.-cx-PRIVATE-SidebarLayout__content__ ul{margin:0;padding:0}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__content__{margin:0 px;border:0;width:100%}.-cx-PRIVATE-SidebarLayout__content__ ul{display:none}}.-cx-PRIVATE-SidebarLayout__root__{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;pointer-events:none;position:absolute;width:100%;z-index:1}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__root__{height:auto;padding-bottom:0;padding-top:78px;position:static}}.-cx-PRIVATE-SidebarLayout__contentWrapper__,.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;margin:0 auto;position:relative;width:992px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__navWrapper__{height:100%}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:auto;min-height:0;padding:0;width:100%}}.-cx-PRIVATE-SidebarLayout__nav__{float:left;height:100%;padding-right:0;pointer-events:initial;width:256px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__nav__{float:none;display:block;margin:0!important;background:0 0;border:0;width:100%}}.-cx-PRIVATE-SidebarLayout__contentWrapper__{background-color:#fff;border:1px solid #efefef;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px 20px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{border:1px solid #efefef;border-radius:3px}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.-cx-PRIVATE-SidebarLayout__pageContent__ .-cx-PRIVATE-SidebarLayout__contentWrapper__{padding:0 10px}}.-cx-PRIVATE-SidebarLayout__pageContent__{color:#262626;margin-left:205px;padding:30px 50px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__pageContent__{margin-left:0;margin-right:0;padding:20px 0}}.-cx-PRIVATE-SidebarLayout__pageContent__>:first-child{margin-top:0}.-cx-PRIVATE-SidebarLayout__pageContent__ a{color:#003569}.-cx-PRIVATE-SidebarLayout__pageContent__ h1{font-size:32px;font-weight:400;margin-bottom:20px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h2{font-size:24px;font-weight:400;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h3{font-weight:600;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ li{padding-left:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ li:not(:first-child){margin-top:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ pre{white-space:pre-wrap}.-cx-PRIVATE-Navigation__header__{color:#999;font-size:16px;font-weight:initial;margin:0;padding:16px;text-transform:uppercase}@media screen and (max-width:990px){.-cx-PRIVATE-Navigation__header__:first-child{display:block}.-cx-PRIVATE-Navigation__header__:not(:first-child){display:none}.-cx-PRIVATE-Navigation__header__ i{float:left;width:22px;height:18px;margin-right:8px;margin-left:10px;background:url(/static/images/glyphs/disclosure-down@2x.png/9ae8409fbb3a.png) no-repeat center;background-size:14px 14px}.-cx-PRIVATE-SidebarLayout__content__.active .-cx-PRIVATE-Navigation__header__ i{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}.-cx-PRIVATE-Navigation__navLink__,.-cx-PRIVATE-Navigation__navLink__:active,.-cx-PRIVATE-Navigation__navLink__:hover,.-cx-PRIVATE-Navigation__navLink__:visited{border-left:2px solid transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:#262626;font-size:16px;display:block;padding:16px 16px 16px 30px;width:100%}.-cx-PRIVATE-Navigation__navLink__:hover{border-left-color:#dbdbdb}.-cx-PRIVATE-Navigation__active__ .-cx-PRIVATE-Navigation__navLink__{border-left-color:#262626;font-weight:600}.-cx-PRIVATE-Footer__root__{font-size:12px;height:77px}.-cx-PRIVATE-Footer__copyright__{color:#262626;display:inline-block;float:right;font-weight:600;margin-top:20px;text-transform:uppercase}.-cx-PRIVATE-Footer__nav__{display:inline-block}@media screen and (max-width:990px){.-cx-PRIVATE-Footer__copyright__{text-align:center;width:100%}}.-cx-PRIVATE-Footer__navItems__{margin:20px 0;padding:0;text-align:center}.-cx-PRIVATE-Footer__navItems__ li{display:inline-block;list-style:none}.-cx-PRIVATE-Footer__navItems__ li:not(:first-child){margin-left:15px}.-cx-PRIVATE-Footer__navItems__ a,.-cx-PRIVATE-Footer__navItems__ a:active,.-cx-PRIVATE-Footer__navItems__ a:focus,.-cx-PRIVATE-Footer__navItems__ a:hover,.-cx-PRIVATE-Footer__navItems__ a:visited{color:#003569;font-weight:600;text-transform:uppercase}.-cx-PRIVATE-Footer__wrapper__{margin-left:auto;margin-right:auto;max-width:1026px;padding:0 20px}.-cx-PRIVATE-ErrorPage__errorContainer__{text-align:center}@media (max-width:990px){.-cx-PRIVATE-ErrorPage__errorContainer__{padding:100px 40px 0}}.-cx-PRIVATE-ErrorPage__errorContainer__ a,.-cx-PRIVATE-ErrorPage__errorContainer__ a:visited{color:#003569}.-cx-PRIVATE-Linkshim__followLink__{background-color:#fff;color:#3897f0;border:1px solid #3897f0;border-radius:3px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:8px;font:inherit;font-weight:700;width:90%}@media (min-width:736px){.-cx-PRIVATE-Linkshim__followLink__{width:10%}}.-cx-PRIVATE-Linkshim__followLink__:active{opacity:.5}.-cx-PRIVATE-Linkshim__followLink__:focus{color:#1372cc;border:1px solid #1372cc}.-cx-PRIVATE-GatedContentPage__userAvatarContainer__{height:70px;text-align:center}.-cx-PRIVATE-GatedContentPage__userAvatar__{border-radius:50%;height:100%;width:auto}</style>\n    \n\n            \n    <script type="text/javascript" src="/static/scripts/jquery.js/a4e77326039e.js" crossorigin="anonymous"></script>\n    <script type="text/javascript" src="/static/scripts/bluebar.js/203583927eba.js" crossorigin="anonymous"></script>\n</head>\n    <body class=" p-error dialog-404" style="">\n        \n            <div class="root -cx-PRIVATE-Page__root -cx-PRIVATE-Page__root__">\n                \n                    <div class="page -cx-PRIVATE-Page__body -cx-PRIVATE-Page__body__">\n                        \n                            \n                                <header class="top-bar top-bar-new -cx-PRIVATE-NavBar__root -cx-PRIVATE-NavBar__root__">\n    <div class="top-bar-wrapper -cx-PRIVATE-NavBar__wrapper -cx-PRIVATE-NavBar__wrapper__">\n        <div class="logo -cx-PRIVATE-NavBar__logo -cx-PRIVATE-NavBar__logo__"><a href="/">Instagram</a></div>\n\n        <div class="top-bar-left -cx-PRIVATE-NavBar__topBarLeft -cx-PRIVATE-NavBar__topBarLeft__">\n            <ul class="top-bar-actions">\n                <li>\n                    <a class="top-bar-home" href="/" label=Home><i></i></a>\n                </li>\n            </ul>\n        </div>\n\n        \n            <div class="top-bar-right account-state" id="top_bar_right">\n                <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions -cx-PRIVATE-NavBar__topBarActions__">\n                    \n                    \n                      \n                      <li id="link_profile" class="link-signin -cx-PRIVATE-NavBar__signIn -cx-PRIVATE-NavBar__signIn__">\n                          <a href="/accounts/login/" class="loginLink">\n                              <i></i>\n                              <strong class="-cx-PRIVATE-NavBar__signInText -cx-PRIVATE-NavBar__signInText__">Log in</strong>\n                          </a>\n                      </li>\n                      \n                    \n                </ul>\n            </div>\n        \n    </div>\n</header> <!-- .top-bar -->\n                            \n                        \n\n                        \n                        <div class="main -cx-PRIVATE-Page__main -cx-PRIVATE-Page__main__">\n                            \n    <div class="error-container -cx-PRIVATE-ErrorPage__errorContainer -cx-PRIVATE-ErrorPage__errorContainer__">\n    \n\n    <h2>Sorry, this page isn&#39;t available.</h2>\n\n    <p>\n        The link you followed may be broken, or the page may have been removed.\n        <a href="/">Go back to Instagram.</a>\n    </p>\n\n\n\n    </div>\n\n                        </div> <!-- .main -->\n                        \n\n                    </div> <!-- .page -->\n\n                    \n                    <footer class="page-footer -cx-PRIVATE-Footer__root -cx-PRIVATE-Footer__root__" role="contentinfo">\n                        <div class="wrapper -cx-PRIVATE-Footer__wrapper -cx-PRIVATE-Footer__wrapper__">\n                            <nav class="-cx-PRIVATE-Footer__nav -cx-PRIVATE-Footer__nav__">\n                                <ul class="-cx-PRIVATE-Footer__navItems -cx-PRIVATE-Footer__navItems__">\n                                    <li><a href="/about/us/">About us</a></li>\n                                    <li><a href="https://help.instagram.com/">Support</a></li>\n                                    <li><a href="https://about.instagram.com/blog/">Press</a></li>\n                                    <li><a href="/developer/">API</a></li>\n                                    <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>\n                                    <li><a href="/legal/privacy/">Privacy</a></li>\n                                    <li><a href="/legal/terms/">\n                                      \n                                          Terms\n                                      \n                                    </a></li>\n                                    \n                                </ul>\n                            </nav>\n\n                            <p class="copyright -cx-PRIVATE-Footer__copyright -cx-PRIVATE-Footer__copyright__">&copy; 2023 Instagram</p>\n                        </div>\n                    </footer>\n                    \n                \n                <div id="reactModalMountPoint"></div>\n            </div> <!-- .root -->\n        \n        \n\n\n        \n            \n\n            \n        \n\n        <script type="text/javascript">\n(function(){\n  function normalizeError(err) {\n    var errorInfo = err.error || {};\n    var getConfigProp = function(propName, defaultValueIfNotTruthy) {\n      var propValue = window._sharedData && window._sharedData[propName];\n      return propValue ? propValue : defaultValueIfNotTruthy;\n    };\n    var windowUrl = window.location.href;\n    var errUrl = err.url || windowUrl;\n    return {\n      line: err.line || errorInfo.message || 0,\n      column: err.column || 0,\n      name: \'InitError\',\n      message: err.message || errorInfo.message || \'\',\n      script: errorInfo.script || \'\',\n      stack: errorInfo.stackTrace || errorInfo.stack || \'\',\n      timestamp: Date.now(),\n      ref: windowUrl.indexOf(\'direct\') >= 0 ? \'direct\' : windowUrl,\n      deployment_stage: getConfigProp(\'deployment_stage\', \'\'),\n      frontend_env: getConfigProp(\'frontend_env\', \'prod\'),\n      rollout_hash: getConfigProp(\'rollout_hash\', \'\'),\n      is_prerelease: window.__PRERELEASE__ || false,\n      bundle_variant: getConfigProp(\'bundle_variant\', null),\n      request_url: errUrl.indexOf(\'direct\') >= 0 ? \'direct\' : errUrl,\n      response_status_code: errorInfo.statusCode || 0\n    }\n  }\n  window.addEventListener(\'load\', function(){\n    if (window.__bufferedErrors && window.__bufferedErrors.length) {\n      if (window.caches && window.caches.keys && window.caches.delete) {\n        window.caches.keys().then(function(keys) {\n          keys.forEach(function(key) {\n            window.caches.delete(key)\n          })\n        })\n      }\n      window.__bufferedErrors.map(function(error) {\n        return normalizeError(error)\n      }).forEach(function(normalizedError) {\n        var request = new XMLHttpRequest();\n        request.open(\'POST\', \'/client_error/\', true);\n        request.setRequestHeader(\'Content-Type\', \'application/json; charset=utf-8\');\n        request.send(JSON.stringify(normalizedError));\n      })\n    }\n  })\n}());\n</script>\n    </body>\n</html>\n'
+2023-04-02 16:26:31,883 - instabot version: 0.117.0 (api) - ERROR - Error checking for `feedback_required`, response text is not JSON
+2023-04-02 16:26:31,883 - instabot version: 0.117.0 (api) - INFO - Full Response: <Response [404]>
+2023-04-02 16:26:31,883 - instabot version: 0.117.0 (api) - INFO - Response Text: <!DOCTYPE html>
+<html lang="None" class="no-js not-logged-in ">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>
+                  Page Not Found &bull; Instagram
+                </title>
+
+        
+        <meta name="robots" content="noimageindex, noarchive">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#ffffff">
+        
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link rel="manifest" href="/data/manifest.json">
+
+        
+        
+        
+
+        <script type="text/javascript">
+        (function() {
+  var docElement = document.documentElement;
+  var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
+  var className = docElement.className;
+  docElement.className = className.replace(classRE, '$1js$2');
+})();
+</script>
+        <script type="text/javascript">
+(function() {
+  if ('PerformanceObserver' in window && 'PerformancePaintTiming' in window) {
+    window.__bufferedPerformance = [];
+    var ob = new PerformanceObserver(function(e) {
+      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());
+    });
+    ob.observe({entryTypes:['paint']});
+  }
+
+  window.__bufferedErrors = [];
+  window.onerror = function(message, url, line, column, error) {
+    window.__bufferedErrors.push({
+      message: message,
+      url: url,
+      line: line,
+      column: column,
+      error: error
+    });
+    return false;
+  };
+  window.__initialData = {
+    pending: true,
+    waiting: []
+  };
+  function asyncFetchSharedData(extra) {
+    var sharedDataReq = new XMLHttpRequest();
+    sharedDataReq.onreadystatechange = function() {
+          if (sharedDataReq.readyState === 4) {
+            if(sharedDataReq.status === 200){
+              var sharedData = JSON.parse(sharedDataReq.responseText);
+              window.__initialDataLoaded(sharedData, extra);
+            }
+          }
+        }
+    sharedDataReq.open('GET', '/data/shared_data/', true);
+    sharedDataReq.send(null);
+  }
+  function notifyLoaded(item, data) {
+    item.pending = false;
+    item.data = data;
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].resolve(item.data);
+    }
+    item.waiting = [];
+  }
+  function notifyError(item, msg) {
+    item.pending = false;
+    item.error = new Error(msg);
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].reject(item.error);
+    }
+    item.waiting = [];
+  }
+  window.__initialDataLoaded = function(initialData, extraData) {
+    if (extraData) {
+      for (var key in extraData) {
+        initialData[key] = extraData[key];
+      }
+    }
+    notifyLoaded(window.__initialData, initialData);
+  };
+  window.__initialDataError = function(msg) {
+    notifyError(window.__initialData, msg);
+  };
+  window.__additionalData = {};
+  window.__pendingAdditionalData = function(paths) {
+    for (var i = 0;i < paths.length; ++i) {
+      window.__additionalData[paths[i]] = {
+        pending: true,
+        waiting: []
+      };
+    }
+  };
+  window.__additionalDataLoaded = function(path, data) {
+    if (path in window.__additionalData) {
+      notifyLoaded(window.__additionalData[path], data);
+    } else {
+      console.error('Unexpected additional data loaded "' + path + '"');
+    }
+  };
+  window.__additionalDataError = function(path, msg) {
+    if (path in window.__additionalData) {
+      notifyError(window.__additionalData[path], msg);
+    } else {
+      console.error('Unexpected additional data encountered an error "' + path + '": ' + msg);
+    }
+  };
+  
+})();
+</script><script type="text/javascript">
+
+/*
+ Copyright 2018 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,
+a):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();
+</script>
+                
+                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/666282be8229.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/8a5bd3f267b1.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/68193576ffc5.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/4985e31c9100.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/c06fdb2357bd.png">
+                
+                
+                    
+                        <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">
+                    
+                
+            
+            
+                    
+                        <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">
+                    
+                
+            
+            
+    
+        <style type="text/css">/* @generated 
+ * DO NOT CHANGE THIS FILE. Instead, modify the non-build version of "main.css"
+ * then run "yolo css"
+ */
+body{-webkit-font-smoothing:antialiased;background-color:#fafafa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}.client-root{font-size:14px}a{text-decoration:none}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__,.-cx-PRIVATE-Page__root__{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.-cx-PRIVATE-Page__root__{height:100vh}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.-cx-PRIVATE-Page__main__{margin-top:137px;position:relative}@media screen and (max-width:990px){.-cx-PRIVATE-Page__main__{display:block;margin-top:0}}.-cx-PRIVATE-NavBar__root__{background-color:#fff;border-bottom:1px solid #efefef;height:77px;position:fixed;top:0;width:100%;z-index:100}.-cx-PRIVATE-NavBar__profilePic__{display:none}.-cx-PRIVATE-NavBar__username__{color:#003569;display:inline!important;float:right;font-weight:400;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signIn__{display:inline-block;float:right;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signInText__{color:#003569;font-weight:400}.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup.png/3a62b1a95da3.png);background-size:100%;height:35px;left:16px;position:absolute;text-indent:-9999em;top:6px;width:176px}.-cx-PRIVATE-NavBar__logo__ a{display:block;height:100%;width:100%}@media screen and (-webkit-min-device-pixel-ratio:1.5),screen and (min-resolution:1.5dppx){.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup@2x.png/43608c988939.png)}}.-cx-PRIVATE-NavBar__logoGroup__{left:16px;position:absolute;top:6px}.-cx-PRIVATE-NavBar__logoGroup__ .-cx-PRIVATE-NavBar__logo__{position:static}.-cx-PRIVATE-NavBar__wrapper__{margin:0 auto;max-width:1026px;padding:0 16px;position:relative}.-cx-PRIVATE-NavBar__topBarActions__,.-cx-PRIVATE-SidebarLayout__content__ li{list-style:none}.-cx-PRIVATE-NavBar__dropdown__,.-cx-PRIVATE-NavBar__topBarLeft__,.-cx-PRIVATE-SidebarLayout__content__ .separator,.-cx-PRIVATE-SidebarLayout__content__ .subtitle{display:none}.-cx-PRIVATE-SidebarLayout__content__{border-right:1px solid #efefef;height:100%;width:220px}.-cx-PRIVATE-SidebarLayout__content__ ul{margin:0;padding:0}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__content__{margin:0 px;border:0;width:100%}.-cx-PRIVATE-SidebarLayout__content__ ul{display:none}}.-cx-PRIVATE-SidebarLayout__root__{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;pointer-events:none;position:absolute;width:100%;z-index:1}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__root__{height:auto;padding-bottom:0;padding-top:78px;position:static}}.-cx-PRIVATE-SidebarLayout__contentWrapper__,.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;margin:0 auto;position:relative;width:992px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__navWrapper__{height:100%}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:auto;min-height:0;padding:0;width:100%}}.-cx-PRIVATE-SidebarLayout__nav__{float:left;height:100%;padding-right:0;pointer-events:initial;width:256px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__nav__{float:none;display:block;margin:0!important;background:0 0;border:0;width:100%}}.-cx-PRIVATE-SidebarLayout__contentWrapper__{background-color:#fff;border:1px solid #efefef;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px 20px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{border:1px solid #efefef;border-radius:3px}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.-cx-PRIVATE-SidebarLayout__pageContent__ .-cx-PRIVATE-SidebarLayout__contentWrapper__{padding:0 10px}}.-cx-PRIVATE-SidebarLayout__pageContent__{color:#262626;margin-left:205px;padding:30px 50px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__pageContent__{margin-left:0;margin-right:0;padding:20px 0}}.-cx-PRIVATE-SidebarLayout__pageContent__>:first-child{margin-top:0}.-cx-PRIVATE-SidebarLayout__pageContent__ a{color:#003569}.-cx-PRIVATE-SidebarLayout__pageContent__ h1{font-size:32px;font-weight:400;margin-bottom:20px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h2{font-size:24px;font-weight:400;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h3{font-weight:600;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ li{padding-left:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ li:not(:first-child){margin-top:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ pre{white-space:pre-wrap}.-cx-PRIVATE-Navigation__header__{color:#999;font-size:16px;font-weight:initial;margin:0;padding:16px;text-transform:uppercase}@media screen and (max-width:990px){.-cx-PRIVATE-Navigation__header__:first-child{display:block}.-cx-PRIVATE-Navigation__header__:not(:first-child){display:none}.-cx-PRIVATE-Navigation__header__ i{float:left;width:22px;height:18px;margin-right:8px;margin-left:10px;background:url(/static/images/glyphs/disclosure-down@2x.png/9ae8409fbb3a.png) no-repeat center;background-size:14px 14px}.-cx-PRIVATE-SidebarLayout__content__.active .-cx-PRIVATE-Navigation__header__ i{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}.-cx-PRIVATE-Navigation__navLink__,.-cx-PRIVATE-Navigation__navLink__:active,.-cx-PRIVATE-Navigation__navLink__:hover,.-cx-PRIVATE-Navigation__navLink__:visited{border-left:2px solid transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:#262626;font-size:16px;display:block;padding:16px 16px 16px 30px;width:100%}.-cx-PRIVATE-Navigation__navLink__:hover{border-left-color:#dbdbdb}.-cx-PRIVATE-Navigation__active__ .-cx-PRIVATE-Navigation__navLink__{border-left-color:#262626;font-weight:600}.-cx-PRIVATE-Footer__root__{font-size:12px;height:77px}.-cx-PRIVATE-Footer__copyright__{color:#262626;display:inline-block;float:right;font-weight:600;margin-top:20px;text-transform:uppercase}.-cx-PRIVATE-Footer__nav__{display:inline-block}@media screen and (max-width:990px){.-cx-PRIVATE-Footer__copyright__{text-align:center;width:100%}}.-cx-PRIVATE-Footer__navItems__{margin:20px 0;padding:0;text-align:center}.-cx-PRIVATE-Footer__navItems__ li{display:inline-block;list-style:none}.-cx-PRIVATE-Footer__navItems__ li:not(:first-child){margin-left:15px}.-cx-PRIVATE-Footer__navItems__ a,.-cx-PRIVATE-Footer__navItems__ a:active,.-cx-PRIVATE-Footer__navItems__ a:focus,.-cx-PRIVATE-Footer__navItems__ a:hover,.-cx-PRIVATE-Footer__navItems__ a:visited{color:#003569;font-weight:600;text-transform:uppercase}.-cx-PRIVATE-Footer__wrapper__{margin-left:auto;margin-right:auto;max-width:1026px;padding:0 20px}.-cx-PRIVATE-ErrorPage__errorContainer__{text-align:center}@media (max-width:990px){.-cx-PRIVATE-ErrorPage__errorContainer__{padding:100px 40px 0}}.-cx-PRIVATE-ErrorPage__errorContainer__ a,.-cx-PRIVATE-ErrorPage__errorContainer__ a:visited{color:#003569}.-cx-PRIVATE-Linkshim__followLink__{background-color:#fff;color:#3897f0;border:1px solid #3897f0;border-radius:3px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:8px;font:inherit;font-weight:700;width:90%}@media (min-width:736px){.-cx-PRIVATE-Linkshim__followLink__{width:10%}}.-cx-PRIVATE-Linkshim__followLink__:active{opacity:.5}.-cx-PRIVATE-Linkshim__followLink__:focus{color:#1372cc;border:1px solid #1372cc}.-cx-PRIVATE-GatedContentPage__userAvatarContainer__{height:70px;text-align:center}.-cx-PRIVATE-GatedContentPage__userAvatar__{border-radius:50%;height:100%;width:auto}</style>
+    
+
+            
+    <script type="text/javascript" src="/static/scripts/jquery.js/a4e77326039e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/scripts/bluebar.js/203583927eba.js" crossorigin="anonymous"></script>
+</head>
+    <body class=" p-error dialog-404" style="">
+        
+            <div class="root -cx-PRIVATE-Page__root -cx-PRIVATE-Page__root__">
+                
+                    <div class="page -cx-PRIVATE-Page__body -cx-PRIVATE-Page__body__">
+                        
+                            
+                                <header class="top-bar top-bar-new -cx-PRIVATE-NavBar__root -cx-PRIVATE-NavBar__root__">
+    <div class="top-bar-wrapper -cx-PRIVATE-NavBar__wrapper -cx-PRIVATE-NavBar__wrapper__">
+        <div class="logo -cx-PRIVATE-NavBar__logo -cx-PRIVATE-NavBar__logo__"><a href="/">Instagram</a></div>
+
+        <div class="top-bar-left -cx-PRIVATE-NavBar__topBarLeft -cx-PRIVATE-NavBar__topBarLeft__">
+            <ul class="top-bar-actions">
+                <li>
+                    <a class="top-bar-home" href="/" label=Home><i></i></a>
+                </li>
+            </ul>
+        </div>
+
+        
+            <div class="top-bar-right account-state" id="top_bar_right">
+                <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions -cx-PRIVATE-NavBar__topBarActions__">
+                    
+                    
+                      
+                      <li id="link_profile" class="link-signin -cx-PRIVATE-NavBar__signIn -cx-PRIVATE-NavBar__signIn__">
+                          <a href="/accounts/login/" class="loginLink">
+                              <i></i>
+                              <strong class="-cx-PRIVATE-NavBar__signInText -cx-PRIVATE-NavBar__signInText__">Log in</strong>
+                          </a>
+                      </li>
+                      
+                    
+                </ul>
+            </div>
+        
+    </div>
+</header> <!-- .top-bar -->
+                            
+                        
+
+                        
+                        <div class="main -cx-PRIVATE-Page__main -cx-PRIVATE-Page__main__">
+                            
+    <div class="error-container -cx-PRIVATE-ErrorPage__errorContainer -cx-PRIVATE-ErrorPage__errorContainer__">
+    
+
+    <h2>Sorry, this page isn&#39;t available.</h2>
+
+    <p>
+        The link you followed may be broken, or the page may have been removed.
+        <a href="/">Go back to Instagram.</a>
+    </p>
+
+
+
+    </div>
+
+                        </div> <!-- .main -->
+                        
+
+                    </div> <!-- .page -->
+
+                    
+                    <footer class="page-footer -cx-PRIVATE-Footer__root -cx-PRIVATE-Footer__root__" role="contentinfo">
+                        <div class="wrapper -cx-PRIVATE-Footer__wrapper -cx-PRIVATE-Footer__wrapper__">
+                            <nav class="-cx-PRIVATE-Footer__nav -cx-PRIVATE-Footer__nav__">
+                                <ul class="-cx-PRIVATE-Footer__navItems -cx-PRIVATE-Footer__navItems__">
+                                    <li><a href="/about/us/">About us</a></li>
+                                    <li><a href="https://help.instagram.com/">Support</a></li>
+                                    <li><a href="https://about.instagram.com/blog/">Press</a></li>
+                                    <li><a href="/developer/">API</a></li>
+                                    <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>
+                                    <li><a href="/legal/privacy/">Privacy</a></li>
+                                    <li><a href="/legal/terms/">
+                                      
+                                          Terms
+                                      
+                                    </a></li>
+                                    
+                                </ul>
+                            </nav>
+
+                            <p class="copyright -cx-PRIVATE-Footer__copyright -cx-PRIVATE-Footer__copyright__">&copy; 2023 Instagram</p>
+                        </div>
+                    </footer>
+                    
+                
+                <div id="reactModalMountPoint"></div>
+            </div> <!-- .root -->
+        
+        
+
+
+        
+            
+
+            
+        
+
+        <script type="text/javascript">
+(function(){
+  function normalizeError(err) {
+    var errorInfo = err.error || {};
+    var getConfigProp = function(propName, defaultValueIfNotTruthy) {
+      var propValue = window._sharedData && window._sharedData[propName];
+      return propValue ? propValue : defaultValueIfNotTruthy;
+    };
+    var windowUrl = window.location.href;
+    var errUrl = err.url || windowUrl;
+    return {
+      line: err.line || errorInfo.message || 0,
+      column: err.column || 0,
+      name: 'InitError',
+      message: err.message || errorInfo.message || '',
+      script: errorInfo.script || '',
+      stack: errorInfo.stackTrace || errorInfo.stack || '',
+      timestamp: Date.now(),
+      ref: windowUrl.indexOf('direct') >= 0 ? 'direct' : windowUrl,
+      deployment_stage: getConfigProp('deployment_stage', ''),
+      frontend_env: getConfigProp('frontend_env', 'prod'),
+      rollout_hash: getConfigProp('rollout_hash', ''),
+      is_prerelease: window.__PRERELEASE__ || false,
+      bundle_variant: getConfigProp('bundle_variant', null),
+      request_url: errUrl.indexOf('direct') >= 0 ? 'direct' : errUrl,
+      response_status_code: errorInfo.statusCode || 0
+    }
+  }
+  window.addEventListener('load', function(){
+    if (window.__bufferedErrors && window.__bufferedErrors.length) {
+      if (window.caches && window.caches.keys && window.caches.delete) {
+        window.caches.keys().then(function(keys) {
+          keys.forEach(function(key) {
+            window.caches.delete(key)
+          })
+        })
+      }
+      window.__bufferedErrors.map(function(error) {
+        return normalizeError(error)
+      }).forEach(function(normalizedError) {
+        var request = new XMLHttpRequest();
+        request.open('POST', '/client_error/', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        request.send(JSON.stringify(normalizedError));
+      })
+    }
+  })
+}());
+</script>
+    </body>
+</html>
+
+2023-04-02 16:26:31,883 - instabot version: 0.117.0 (api) - ERROR - Error unknown send request
+2023-04-02 16:26:32,097 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: qp/get_cooldowns/?signed_body=signed_body=4b9c516a5410a3bc128e09c6104a7f042146b9c2023870560c63a43a7f66781c.4&ig_sig_key_version=4&ig_sig_key_version=4 returned response: <Response [200]>
+2023-04-02 16:26:32,302 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/arlink_download_info/?version_override=2.2.1 returned response: <Response [200]>
+2023-04-02 16:26:33,082 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/520563360/info/ returned response: <Response [200]>
+2023-04-02 16:26:33,779 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+2023-04-02 16:26:35,369 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20 returned response: <Response [200]>
+2023-04-02 16:26:35,640 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/inbox/?visual_message_return_type=unseen&persistentBadging=true&limit=0 returned response: <Response [200]>
+2023-04-02 16:26:37,403 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: discover/topical_explore/?is_prefetch=true&omit_cover_media=true&use_sectional_payload=true&timezone_offset=0&session_id=d0e56b15-6466-46fd-8687-1802c9cd44f0&include_fixed_destinations=true returned response: <Response [200]>
+2023-04-02 16:26:37,651 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: notifications/badge/ returned response: <Response [200]>
+2023-04-02 16:26:38,046 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qp/batch_fetch/ returned response: <Response [200]>
+2023-04-02 16:26:38,047 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: /Users/apple/PycharmProjects/binance/ig/config/trendyground.checkpoint
+2023-04-02 16:26:38,047 - instabot version: 0.117.0 (bot_follow) - INFO - Follow followers of: v
+2023-04-02 16:26:38,258 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/v/usernameinfo/ returned response: <Response [404]>
+2023-04-02 16:26:38,258 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"User not found","status":"fail","error_type":"user_not_found"}'
+2023-04-02 16:26:38,998 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/None/info/ returned response: <Response [404]>
+2023-04-02 16:26:38,998 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'<!DOCTYPE html>\n<html lang="None" class="no-js not-logged-in ">\n    <head>\n        <meta charset="utf-8">\n        <meta http-equiv="X-UA-Compatible" content="IE=edge">\n\n        <title>\n                  Page Not Found &bull; Instagram\n                </title>\n\n        \n        <meta name="robots" content="noimageindex, noarchive">\n        <meta name="apple-mobile-web-app-status-bar-style" content="default">\n        <meta name="mobile-web-app-capable" content="yes">\n        <meta name="theme-color" content="#ffffff">\n        \n        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">\n        <link rel="manifest" href="/data/manifest.json">\n\n        \n        \n        \n\n        <script type="text/javascript">\n        (function() {\n  var docElement = document.documentElement;\n  var classRE = new RegExp(\'(^|\\\\s)no-js(\\\\s|$)\');\n  var className = docElement.className;\n  docElement.className = className.replace(classRE, \'$1js$2\');\n})();\n</script>\n        <script type="text/javascript">\n(function() {\n  if (\'PerformanceObserver\' in window && \'PerformancePaintTiming\' in window) {\n    window.__bufferedPerformance = [];\n    var ob = new PerformanceObserver(function(e) {\n      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());\n    });\n    ob.observe({entryTypes:[\'paint\']});\n  }\n\n  window.__bufferedErrors = [];\n  window.onerror = function(message, url, line, column, error) {\n    window.__bufferedErrors.push({\n      message: message,\n      url: url,\n      line: line,\n      column: column,\n      error: error\n    });\n    return false;\n  };\n  window.__initialData = {\n    pending: true,\n    waiting: []\n  };\n  function asyncFetchSharedData(extra) {\n    var sharedDataReq = new XMLHttpRequest();\n    sharedDataReq.onreadystatechange = function() {\n          if (sharedDataReq.readyState === 4) {\n            if(sharedDataReq.status === 200){\n              var sharedData = JSON.parse(sharedDataReq.responseText);\n              window.__initialDataLoaded(sharedData, extra);\n            }\n          }\n        }\n    sharedDataReq.open(\'GET\', \'/data/shared_data/\', true);\n    sharedDataReq.send(null);\n  }\n  function notifyLoaded(item, data) {\n    item.pending = false;\n    item.data = data;\n    for (var i = 0;i < item.waiting.length; ++i) {\n      item.waiting[i].resolve(item.data);\n    }\n    item.waiting = [];\n  }\n  function notifyError(item, msg) {\n    item.pending = false;\n    item.error = new Error(msg);\n    for (var i = 0;i < item.waiting.length; ++i) {\n      item.waiting[i].reject(item.error);\n    }\n    item.waiting = [];\n  }\n  window.__initialDataLoaded = function(initialData, extraData) {\n    if (extraData) {\n      for (var key in extraData) {\n        initialData[key] = extraData[key];\n      }\n    }\n    notifyLoaded(window.__initialData, initialData);\n  };\n  window.__initialDataError = function(msg) {\n    notifyError(window.__initialData, msg);\n  };\n  window.__additionalData = {};\n  window.__pendingAdditionalData = function(paths) {\n    for (var i = 0;i < paths.length; ++i) {\n      window.__additionalData[paths[i]] = {\n        pending: true,\n        waiting: []\n      };\n    }\n  };\n  window.__additionalDataLoaded = function(path, data) {\n    if (path in window.__additionalData) {\n      notifyLoaded(window.__additionalData[path], data);\n    } else {\n      console.error(\'Unexpected additional data loaded "\' + path + \'"\');\n    }\n  };\n  window.__additionalDataError = function(path, msg) {\n    if (path in window.__additionalData) {\n      notifyError(window.__additionalData[path], msg);\n    } else {\n      console.error(\'Unexpected additional data encountered an error "\' + path + \'": \' + msg);\n    }\n  };\n  \n})();\n</script><script type="text/javascript">\n\n/*\n Copyright 2018 Google Inc. All Rights Reserved.\n Licensed under the Apache License, Version 2.0 (the "License");\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n     http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n*/\n\n(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,\na):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();\n</script>\n                \n                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/666282be8229.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/8a5bd3f267b1.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/68193576ffc5.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/4985e31c9100.png">\n                    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/c06fdb2357bd.png">\n                \n                \n                    \n                        <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">\n                    \n                \n            \n            \n                    \n                        <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">\n                    \n                \n            \n            \n    \n        <style type="text/css">/* @generated \n * DO NOT CHANGE THIS FILE. Instead, modify the non-build version of "main.css"\n * then run "yolo css"\n */\nbody{-webkit-font-smoothing:antialiased;background-color:#fafafa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}.client-root{font-size:14px}a{text-decoration:none}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__,.-cx-PRIVATE-Page__root__{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.-cx-PRIVATE-Page__root__{height:100vh}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.-cx-PRIVATE-Page__main__{margin-top:137px;position:relative}@media screen and (max-width:990px){.-cx-PRIVATE-Page__main__{display:block;margin-top:0}}.-cx-PRIVATE-NavBar__root__{background-color:#fff;border-bottom:1px solid #efefef;height:77px;position:fixed;top:0;width:100%;z-index:100}.-cx-PRIVATE-NavBar__profilePic__{display:none}.-cx-PRIVATE-NavBar__username__{color:#003569;display:inline!important;float:right;font-weight:400;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signIn__{display:inline-block;float:right;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signInText__{color:#003569;font-weight:400}.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup.png/3a62b1a95da3.png);background-size:100%;height:35px;left:16px;position:absolute;text-indent:-9999em;top:6px;width:176px}.-cx-PRIVATE-NavBar__logo__ a{display:block;height:100%;width:100%}@media screen and (-webkit-min-device-pixel-ratio:1.5),screen and (min-resolution:1.5dppx){.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup@2x.png/43608c988939.png)}}.-cx-PRIVATE-NavBar__logoGroup__{left:16px;position:absolute;top:6px}.-cx-PRIVATE-NavBar__logoGroup__ .-cx-PRIVATE-NavBar__logo__{position:static}.-cx-PRIVATE-NavBar__wrapper__{margin:0 auto;max-width:1026px;padding:0 16px;position:relative}.-cx-PRIVATE-NavBar__topBarActions__,.-cx-PRIVATE-SidebarLayout__content__ li{list-style:none}.-cx-PRIVATE-NavBar__dropdown__,.-cx-PRIVATE-NavBar__topBarLeft__,.-cx-PRIVATE-SidebarLayout__content__ .separator,.-cx-PRIVATE-SidebarLayout__content__ .subtitle{display:none}.-cx-PRIVATE-SidebarLayout__content__{border-right:1px solid #efefef;height:100%;width:220px}.-cx-PRIVATE-SidebarLayout__content__ ul{margin:0;padding:0}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__content__{margin:0 px;border:0;width:100%}.-cx-PRIVATE-SidebarLayout__content__ ul{display:none}}.-cx-PRIVATE-SidebarLayout__root__{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;pointer-events:none;position:absolute;width:100%;z-index:1}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__root__{height:auto;padding-bottom:0;padding-top:78px;position:static}}.-cx-PRIVATE-SidebarLayout__contentWrapper__,.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;margin:0 auto;position:relative;width:992px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__navWrapper__{height:100%}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:auto;min-height:0;padding:0;width:100%}}.-cx-PRIVATE-SidebarLayout__nav__{float:left;height:100%;padding-right:0;pointer-events:initial;width:256px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__nav__{float:none;display:block;margin:0!important;background:0 0;border:0;width:100%}}.-cx-PRIVATE-SidebarLayout__contentWrapper__{background-color:#fff;border:1px solid #efefef;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px 20px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{border:1px solid #efefef;border-radius:3px}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.-cx-PRIVATE-SidebarLayout__pageContent__ .-cx-PRIVATE-SidebarLayout__contentWrapper__{padding:0 10px}}.-cx-PRIVATE-SidebarLayout__pageContent__{color:#262626;margin-left:205px;padding:30px 50px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__pageContent__{margin-left:0;margin-right:0;padding:20px 0}}.-cx-PRIVATE-SidebarLayout__pageContent__>:first-child{margin-top:0}.-cx-PRIVATE-SidebarLayout__pageContent__ a{color:#003569}.-cx-PRIVATE-SidebarLayout__pageContent__ h1{font-size:32px;font-weight:400;margin-bottom:20px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h2{font-size:24px;font-weight:400;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h3{font-weight:600;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ li{padding-left:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ li:not(:first-child){margin-top:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ pre{white-space:pre-wrap}.-cx-PRIVATE-Navigation__header__{color:#999;font-size:16px;font-weight:initial;margin:0;padding:16px;text-transform:uppercase}@media screen and (max-width:990px){.-cx-PRIVATE-Navigation__header__:first-child{display:block}.-cx-PRIVATE-Navigation__header__:not(:first-child){display:none}.-cx-PRIVATE-Navigation__header__ i{float:left;width:22px;height:18px;margin-right:8px;margin-left:10px;background:url(/static/images/glyphs/disclosure-down@2x.png/9ae8409fbb3a.png) no-repeat center;background-size:14px 14px}.-cx-PRIVATE-SidebarLayout__content__.active .-cx-PRIVATE-Navigation__header__ i{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}.-cx-PRIVATE-Navigation__navLink__,.-cx-PRIVATE-Navigation__navLink__:active,.-cx-PRIVATE-Navigation__navLink__:hover,.-cx-PRIVATE-Navigation__navLink__:visited{border-left:2px solid transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:#262626;font-size:16px;display:block;padding:16px 16px 16px 30px;width:100%}.-cx-PRIVATE-Navigation__navLink__:hover{border-left-color:#dbdbdb}.-cx-PRIVATE-Navigation__active__ .-cx-PRIVATE-Navigation__navLink__{border-left-color:#262626;font-weight:600}.-cx-PRIVATE-Footer__root__{font-size:12px;height:77px}.-cx-PRIVATE-Footer__copyright__{color:#262626;display:inline-block;float:right;font-weight:600;margin-top:20px;text-transform:uppercase}.-cx-PRIVATE-Footer__nav__{display:inline-block}@media screen and (max-width:990px){.-cx-PRIVATE-Footer__copyright__{text-align:center;width:100%}}.-cx-PRIVATE-Footer__navItems__{margin:20px 0;padding:0;text-align:center}.-cx-PRIVATE-Footer__navItems__ li{display:inline-block;list-style:none}.-cx-PRIVATE-Footer__navItems__ li:not(:first-child){margin-left:15px}.-cx-PRIVATE-Footer__navItems__ a,.-cx-PRIVATE-Footer__navItems__ a:active,.-cx-PRIVATE-Footer__navItems__ a:focus,.-cx-PRIVATE-Footer__navItems__ a:hover,.-cx-PRIVATE-Footer__navItems__ a:visited{color:#003569;font-weight:600;text-transform:uppercase}.-cx-PRIVATE-Footer__wrapper__{margin-left:auto;margin-right:auto;max-width:1026px;padding:0 20px}.-cx-PRIVATE-ErrorPage__errorContainer__{text-align:center}@media (max-width:990px){.-cx-PRIVATE-ErrorPage__errorContainer__{padding:100px 40px 0}}.-cx-PRIVATE-ErrorPage__errorContainer__ a,.-cx-PRIVATE-ErrorPage__errorContainer__ a:visited{color:#003569}.-cx-PRIVATE-Linkshim__followLink__{background-color:#fff;color:#3897f0;border:1px solid #3897f0;border-radius:3px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:8px;font:inherit;font-weight:700;width:90%}@media (min-width:736px){.-cx-PRIVATE-Linkshim__followLink__{width:10%}}.-cx-PRIVATE-Linkshim__followLink__:active{opacity:.5}.-cx-PRIVATE-Linkshim__followLink__:focus{color:#1372cc;border:1px solid #1372cc}.-cx-PRIVATE-GatedContentPage__userAvatarContainer__{height:70px;text-align:center}.-cx-PRIVATE-GatedContentPage__userAvatar__{border-radius:50%;height:100%;width:auto}</style>\n    \n\n            \n    <script type="text/javascript" src="/static/scripts/jquery.js/a4e77326039e.js" crossorigin="anonymous"></script>\n    <script type="text/javascript" src="/static/scripts/bluebar.js/203583927eba.js" crossorigin="anonymous"></script>\n</head>\n    <body class=" p-error dialog-404" style="">\n        \n            <div class="root -cx-PRIVATE-Page__root -cx-PRIVATE-Page__root__">\n                \n                    <div class="page -cx-PRIVATE-Page__body -cx-PRIVATE-Page__body__">\n                        \n                            \n                                <header class="top-bar top-bar-new -cx-PRIVATE-NavBar__root -cx-PRIVATE-NavBar__root__">\n    <div class="top-bar-wrapper -cx-PRIVATE-NavBar__wrapper -cx-PRIVATE-NavBar__wrapper__">\n        <div class="logo -cx-PRIVATE-NavBar__logo -cx-PRIVATE-NavBar__logo__"><a href="/">Instagram</a></div>\n\n        <div class="top-bar-left -cx-PRIVATE-NavBar__topBarLeft -cx-PRIVATE-NavBar__topBarLeft__">\n            <ul class="top-bar-actions">\n                <li>\n                    <a class="top-bar-home" href="/" label=Home><i></i></a>\n                </li>\n            </ul>\n        </div>\n\n        \n            <div class="top-bar-right account-state" id="top_bar_right">\n                <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions -cx-PRIVATE-NavBar__topBarActions__">\n                    \n                    \n                      \n                      <li id="link_profile" class="link-signin -cx-PRIVATE-NavBar__signIn -cx-PRIVATE-NavBar__signIn__">\n                          <a href="/accounts/login/" class="loginLink">\n                              <i></i>\n                              <strong class="-cx-PRIVATE-NavBar__signInText -cx-PRIVATE-NavBar__signInText__">Log in</strong>\n                          </a>\n                      </li>\n                      \n                    \n                </ul>\n            </div>\n        \n    </div>\n</header> <!-- .top-bar -->\n                            \n                        \n\n                        \n                        <div class="main -cx-PRIVATE-Page__main -cx-PRIVATE-Page__main__">\n                            \n    <div class="error-container -cx-PRIVATE-ErrorPage__errorContainer -cx-PRIVATE-ErrorPage__errorContainer__">\n    \n\n    <h2>Sorry, this page isn&#39;t available.</h2>\n\n    <p>\n        The link you followed may be broken, or the page may have been removed.\n        <a href="/">Go back to Instagram.</a>\n    </p>\n\n\n\n    </div>\n\n                        </div> <!-- .main -->\n                        \n\n                    </div> <!-- .page -->\n\n                    \n                    <footer class="page-footer -cx-PRIVATE-Footer__root -cx-PRIVATE-Footer__root__" role="contentinfo">\n                        <div class="wrapper -cx-PRIVATE-Footer__wrapper -cx-PRIVATE-Footer__wrapper__">\n                            <nav class="-cx-PRIVATE-Footer__nav -cx-PRIVATE-Footer__nav__">\n                                <ul class="-cx-PRIVATE-Footer__navItems -cx-PRIVATE-Footer__navItems__">\n                                    <li><a href="/about/us/">About us</a></li>\n                                    <li><a href="https://help.instagram.com/">Support</a></li>\n                                    <li><a href="https://about.instagram.com/blog/">Press</a></li>\n                                    <li><a href="/developer/">API</a></li>\n                                    <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>\n                                    <li><a href="/legal/privacy/">Privacy</a></li>\n                                    <li><a href="/legal/terms/">\n                                      \n                                          Terms\n                                      \n                                    </a></li>\n                                    \n                                </ul>\n                            </nav>\n\n                            <p class="copyright -cx-PRIVATE-Footer__copyright -cx-PRIVATE-Footer__copyright__">&copy; 2023 Instagram</p>\n                        </div>\n                    </footer>\n                    \n                \n                <div id="reactModalMountPoint"></div>\n            </div> <!-- .root -->\n        \n        \n\n\n        \n            \n\n            \n        \n\n        <script type="text/javascript">\n(function(){\n  function normalizeError(err) {\n    var errorInfo = err.error || {};\n    var getConfigProp = function(propName, defaultValueIfNotTruthy) {\n      var propValue = window._sharedData && window._sharedData[propName];\n      return propValue ? propValue : defaultValueIfNotTruthy;\n    };\n    var windowUrl = window.location.href;\n    var errUrl = err.url || windowUrl;\n    return {\n      line: err.line || errorInfo.message || 0,\n      column: err.column || 0,\n      name: \'InitError\',\n      message: err.message || errorInfo.message || \'\',\n      script: errorInfo.script || \'\',\n      stack: errorInfo.stackTrace || errorInfo.stack || \'\',\n      timestamp: Date.now(),\n      ref: windowUrl.indexOf(\'direct\') >= 0 ? \'direct\' : windowUrl,\n      deployment_stage: getConfigProp(\'deployment_stage\', \'\'),\n      frontend_env: getConfigProp(\'frontend_env\', \'prod\'),\n      rollout_hash: getConfigProp(\'rollout_hash\', \'\'),\n      is_prerelease: window.__PRERELEASE__ || false,\n      bundle_variant: getConfigProp(\'bundle_variant\', null),\n      request_url: errUrl.indexOf(\'direct\') >= 0 ? \'direct\' : errUrl,\n      response_status_code: errorInfo.statusCode || 0\n    }\n  }\n  window.addEventListener(\'load\', function(){\n    if (window.__bufferedErrors && window.__bufferedErrors.length) {\n      if (window.caches && window.caches.keys && window.caches.delete) {\n        window.caches.keys().then(function(keys) {\n          keys.forEach(function(key) {\n            window.caches.delete(key)\n          })\n        })\n      }\n      window.__bufferedErrors.map(function(error) {\n        return normalizeError(error)\n      }).forEach(function(normalizedError) {\n        var request = new XMLHttpRequest();\n        request.open(\'POST\', \'/client_error/\', true);\n        request.setRequestHeader(\'Content-Type\', \'application/json; charset=utf-8\');\n        request.send(JSON.stringify(normalizedError));\n      })\n    }\n  })\n}());\n</script>\n    </body>\n</html>\n'
+2023-04-02 16:26:38,998 - instabot version: 0.117.0 (api) - ERROR - Error checking for `feedback_required`, response text is not JSON
+2023-04-02 16:26:38,998 - instabot version: 0.117.0 (api) - INFO - Full Response: <Response [404]>
+2023-04-02 16:26:38,999 - instabot version: 0.117.0 (api) - INFO - Response Text: <!DOCTYPE html>
+<html lang="None" class="no-js not-logged-in ">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>
+                  Page Not Found &bull; Instagram
+                </title>
+
+        
+        <meta name="robots" content="noimageindex, noarchive">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#ffffff">
+        
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link rel="manifest" href="/data/manifest.json">
+
+        
+        
+        
+
+        <script type="text/javascript">
+        (function() {
+  var docElement = document.documentElement;
+  var classRE = new RegExp('(^|\\s)no-js(\\s|$)');
+  var className = docElement.className;
+  docElement.className = className.replace(classRE, '$1js$2');
+})();
+</script>
+        <script type="text/javascript">
+(function() {
+  if ('PerformanceObserver' in window && 'PerformancePaintTiming' in window) {
+    window.__bufferedPerformance = [];
+    var ob = new PerformanceObserver(function(e) {
+      window.__bufferedPerformance.push.apply(window.__bufferedPerformance,e.getEntries());
+    });
+    ob.observe({entryTypes:['paint']});
+  }
+
+  window.__bufferedErrors = [];
+  window.onerror = function(message, url, line, column, error) {
+    window.__bufferedErrors.push({
+      message: message,
+      url: url,
+      line: line,
+      column: column,
+      error: error
+    });
+    return false;
+  };
+  window.__initialData = {
+    pending: true,
+    waiting: []
+  };
+  function asyncFetchSharedData(extra) {
+    var sharedDataReq = new XMLHttpRequest();
+    sharedDataReq.onreadystatechange = function() {
+          if (sharedDataReq.readyState === 4) {
+            if(sharedDataReq.status === 200){
+              var sharedData = JSON.parse(sharedDataReq.responseText);
+              window.__initialDataLoaded(sharedData, extra);
+            }
+          }
+        }
+    sharedDataReq.open('GET', '/data/shared_data/', true);
+    sharedDataReq.send(null);
+  }
+  function notifyLoaded(item, data) {
+    item.pending = false;
+    item.data = data;
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].resolve(item.data);
+    }
+    item.waiting = [];
+  }
+  function notifyError(item, msg) {
+    item.pending = false;
+    item.error = new Error(msg);
+    for (var i = 0;i < item.waiting.length; ++i) {
+      item.waiting[i].reject(item.error);
+    }
+    item.waiting = [];
+  }
+  window.__initialDataLoaded = function(initialData, extraData) {
+    if (extraData) {
+      for (var key in extraData) {
+        initialData[key] = extraData[key];
+      }
+    }
+    notifyLoaded(window.__initialData, initialData);
+  };
+  window.__initialDataError = function(msg) {
+    notifyError(window.__initialData, msg);
+  };
+  window.__additionalData = {};
+  window.__pendingAdditionalData = function(paths) {
+    for (var i = 0;i < paths.length; ++i) {
+      window.__additionalData[paths[i]] = {
+        pending: true,
+        waiting: []
+      };
+    }
+  };
+  window.__additionalDataLoaded = function(path, data) {
+    if (path in window.__additionalData) {
+      notifyLoaded(window.__additionalData[path], data);
+    } else {
+      console.error('Unexpected additional data loaded "' + path + '"');
+    }
+  };
+  window.__additionalDataError = function(path, msg) {
+    if (path in window.__additionalData) {
+      notifyError(window.__additionalData[path], msg);
+    } else {
+      console.error('Unexpected additional data encountered an error "' + path + '": ' + msg);
+    }
+  };
+  
+})();
+</script><script type="text/javascript">
+
+/*
+ Copyright 2018 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+(function(){function g(a,c){b||(b=a,f=c,h.forEach(function(a){removeEventListener(a,l,e)}),m())}function m(){b&&f&&0<d.length&&(d.forEach(function(a){a(b,f)}),d=[])}function n(a,c){function k(){g(a,c);d()}function b(){d()}function d(){removeEventListener("pointerup",k,e);removeEventListener("pointercancel",b,e)}addEventListener("pointerup",k,e);addEventListener("pointercancel",b,e)}function l(a){if(a.cancelable){var c=performance.now(),b=a.timeStamp;b>c&&(c=+new Date);c-=b;"pointerdown"==a.type?n(c,
+a):g(c,a)}}var e={passive:!0,capture:!0},h=["click","mousedown","keydown","touchstart","pointerdown"],b,f,d=[];h.forEach(function(a){addEventListener(a,l,e)});window.perfMetrics=window.perfMetrics||{};window.perfMetrics.onFirstInputDelay=function(a){d.push(a);m()}})();
+</script>
+                
+                    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/images/ico/apple-touch-icon-76x76-precomposed.png/666282be8229.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/images/ico/apple-touch-icon-120x120-precomposed.png/8a5bd3f267b1.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/images/ico/apple-touch-icon-152x152-precomposed.png/68193576ffc5.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/static/images/ico/apple-touch-icon-167x167-precomposed.png/4985e31c9100.png">
+                    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/static/images/ico/apple-touch-icon-180x180-precomposed.png/c06fdb2357bd.png">
+                
+                
+                    
+                        <link rel="icon" sizes="192x192" href="/static/images/ico/favicon-192.png/68d99ba29cc8.png">
+                    
+                
+            
+            
+                    
+                        <link rel="shortcut icon" type="image/x-icon" href="/static/images/ico/favicon.ico/36b3ee2d91ed.ico">
+                    
+                
+            
+            
+    
+        <style type="text/css">/* @generated 
+ * DO NOT CHANGE THIS FILE. Instead, modify the non-build version of "main.css"
+ * then run "yolo css"
+ */
+body{-webkit-font-smoothing:antialiased;background-color:#fafafa;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0}.client-root{font-size:14px}a{text-decoration:none}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__,.-cx-PRIVATE-Page__root__{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.-cx-PRIVATE-Page__root__{height:100vh}.-cx-PRIVATE-Page__body__,.-cx-PRIVATE-Page__main__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}.-cx-PRIVATE-Page__main__{margin-top:137px;position:relative}@media screen and (max-width:990px){.-cx-PRIVATE-Page__main__{display:block;margin-top:0}}.-cx-PRIVATE-NavBar__root__{background-color:#fff;border-bottom:1px solid #efefef;height:77px;position:fixed;top:0;width:100%;z-index:100}.-cx-PRIVATE-NavBar__profilePic__{display:none}.-cx-PRIVATE-NavBar__username__{color:#003569;display:inline!important;float:right;font-weight:400;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signIn__{display:inline-block;float:right;margin-right:2px;margin-top:12px}.-cx-PRIVATE-NavBar__signInText__{color:#003569;font-weight:400}.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup.png/3a62b1a95da3.png);background-size:100%;height:35px;left:16px;position:absolute;text-indent:-9999em;top:6px;width:176px}.-cx-PRIVATE-NavBar__logo__ a{display:block;height:100%;width:100%}@media screen and (-webkit-min-device-pixel-ratio:1.5),screen and (min-resolution:1.5dppx){.-cx-PRIVATE-NavBar__logo__{background-image:url(/static/images/branding/logoWhiteoutLockup@2x.png/43608c988939.png)}}.-cx-PRIVATE-NavBar__logoGroup__{left:16px;position:absolute;top:6px}.-cx-PRIVATE-NavBar__logoGroup__ .-cx-PRIVATE-NavBar__logo__{position:static}.-cx-PRIVATE-NavBar__wrapper__{margin:0 auto;max-width:1026px;padding:0 16px;position:relative}.-cx-PRIVATE-NavBar__topBarActions__,.-cx-PRIVATE-SidebarLayout__content__ li{list-style:none}.-cx-PRIVATE-NavBar__dropdown__,.-cx-PRIVATE-NavBar__topBarLeft__,.-cx-PRIVATE-SidebarLayout__content__ .separator,.-cx-PRIVATE-SidebarLayout__content__ .subtitle{display:none}.-cx-PRIVATE-SidebarLayout__content__{border-right:1px solid #efefef;height:100%;width:220px}.-cx-PRIVATE-SidebarLayout__content__ ul{margin:0;padding:0}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__content__{margin:0 px;border:0;width:100%}.-cx-PRIVATE-SidebarLayout__content__ ul{display:none}}.-cx-PRIVATE-SidebarLayout__root__{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;pointer-events:none;position:absolute;width:100%;z-index:1}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__root__{height:auto;padding-bottom:0;padding-top:78px;position:static}}.-cx-PRIVATE-SidebarLayout__contentWrapper__,.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;margin:0 auto;position:relative;width:992px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__navWrapper__{height:100%}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__navWrapper__{-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;height:auto;min-height:0;padding:0;width:100%}}.-cx-PRIVATE-SidebarLayout__nav__{float:left;height:100%;padding-right:0;pointer-events:initial;width:256px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__nav__{float:none;display:block;margin:0!important;background:0 0;border:0;width:100%}}.-cx-PRIVATE-SidebarLayout__contentWrapper__{background-color:#fff;border:1px solid #efefef;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px 20px}@media screen and (min-width:991px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{border:1px solid #efefef;border-radius:3px}}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__contentWrapper__{width:100%;-webkit-box-sizing:border-box;box-sizing:border-box}.-cx-PRIVATE-SidebarLayout__pageContent__ .-cx-PRIVATE-SidebarLayout__contentWrapper__{padding:0 10px}}.-cx-PRIVATE-SidebarLayout__pageContent__{color:#262626;margin-left:205px;padding:30px 50px}@media screen and (max-width:990px){.-cx-PRIVATE-SidebarLayout__pageContent__{margin-left:0;margin-right:0;padding:20px 0}}.-cx-PRIVATE-SidebarLayout__pageContent__>:first-child{margin-top:0}.-cx-PRIVATE-SidebarLayout__pageContent__ a{color:#003569}.-cx-PRIVATE-SidebarLayout__pageContent__ h1{font-size:32px;font-weight:400;margin-bottom:20px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h2{font-size:24px;font-weight:400;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ h3{font-weight:600;margin-bottom:12px;margin-top:28px}.-cx-PRIVATE-SidebarLayout__pageContent__ li{padding-left:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ li:not(:first-child){margin-top:8px}.-cx-PRIVATE-SidebarLayout__pageContent__ pre{white-space:pre-wrap}.-cx-PRIVATE-Navigation__header__{color:#999;font-size:16px;font-weight:initial;margin:0;padding:16px;text-transform:uppercase}@media screen and (max-width:990px){.-cx-PRIVATE-Navigation__header__:first-child{display:block}.-cx-PRIVATE-Navigation__header__:not(:first-child){display:none}.-cx-PRIVATE-Navigation__header__ i{float:left;width:22px;height:18px;margin-right:8px;margin-left:10px;background:url(/static/images/glyphs/disclosure-down@2x.png/9ae8409fbb3a.png) no-repeat center;background-size:14px 14px}.-cx-PRIVATE-SidebarLayout__content__.active .-cx-PRIVATE-Navigation__header__ i{-webkit-transform:rotate(180deg);transform:rotate(180deg)}}.-cx-PRIVATE-Navigation__navLink__,.-cx-PRIVATE-Navigation__navLink__:active,.-cx-PRIVATE-Navigation__navLink__:hover,.-cx-PRIVATE-Navigation__navLink__:visited{border-left:2px solid transparent;-webkit-box-sizing:border-box;box-sizing:border-box;color:#262626;font-size:16px;display:block;padding:16px 16px 16px 30px;width:100%}.-cx-PRIVATE-Navigation__navLink__:hover{border-left-color:#dbdbdb}.-cx-PRIVATE-Navigation__active__ .-cx-PRIVATE-Navigation__navLink__{border-left-color:#262626;font-weight:600}.-cx-PRIVATE-Footer__root__{font-size:12px;height:77px}.-cx-PRIVATE-Footer__copyright__{color:#262626;display:inline-block;float:right;font-weight:600;margin-top:20px;text-transform:uppercase}.-cx-PRIVATE-Footer__nav__{display:inline-block}@media screen and (max-width:990px){.-cx-PRIVATE-Footer__copyright__{text-align:center;width:100%}}.-cx-PRIVATE-Footer__navItems__{margin:20px 0;padding:0;text-align:center}.-cx-PRIVATE-Footer__navItems__ li{display:inline-block;list-style:none}.-cx-PRIVATE-Footer__navItems__ li:not(:first-child){margin-left:15px}.-cx-PRIVATE-Footer__navItems__ a,.-cx-PRIVATE-Footer__navItems__ a:active,.-cx-PRIVATE-Footer__navItems__ a:focus,.-cx-PRIVATE-Footer__navItems__ a:hover,.-cx-PRIVATE-Footer__navItems__ a:visited{color:#003569;font-weight:600;text-transform:uppercase}.-cx-PRIVATE-Footer__wrapper__{margin-left:auto;margin-right:auto;max-width:1026px;padding:0 20px}.-cx-PRIVATE-ErrorPage__errorContainer__{text-align:center}@media (max-width:990px){.-cx-PRIVATE-ErrorPage__errorContainer__{padding:100px 40px 0}}.-cx-PRIVATE-ErrorPage__errorContainer__ a,.-cx-PRIVATE-ErrorPage__errorContainer__ a:visited{color:#003569}.-cx-PRIVATE-Linkshim__followLink__{background-color:#fff;color:#3897f0;border:1px solid #3897f0;border-radius:3px;display:inline-block;-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;padding:8px;font:inherit;font-weight:700;width:90%}@media (min-width:736px){.-cx-PRIVATE-Linkshim__followLink__{width:10%}}.-cx-PRIVATE-Linkshim__followLink__:active{opacity:.5}.-cx-PRIVATE-Linkshim__followLink__:focus{color:#1372cc;border:1px solid #1372cc}.-cx-PRIVATE-GatedContentPage__userAvatarContainer__{height:70px;text-align:center}.-cx-PRIVATE-GatedContentPage__userAvatar__{border-radius:50%;height:100%;width:auto}</style>
+    
+
+            
+    <script type="text/javascript" src="/static/scripts/jquery.js/a4e77326039e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/scripts/bluebar.js/203583927eba.js" crossorigin="anonymous"></script>
+</head>
+    <body class=" p-error dialog-404" style="">
+        
+            <div class="root -cx-PRIVATE-Page__root -cx-PRIVATE-Page__root__">
+                
+                    <div class="page -cx-PRIVATE-Page__body -cx-PRIVATE-Page__body__">
+                        
+                            
+                                <header class="top-bar top-bar-new -cx-PRIVATE-NavBar__root -cx-PRIVATE-NavBar__root__">
+    <div class="top-bar-wrapper -cx-PRIVATE-NavBar__wrapper -cx-PRIVATE-NavBar__wrapper__">
+        <div class="logo -cx-PRIVATE-NavBar__logo -cx-PRIVATE-NavBar__logo__"><a href="/">Instagram</a></div>
+
+        <div class="top-bar-left -cx-PRIVATE-NavBar__topBarLeft -cx-PRIVATE-NavBar__topBarLeft__">
+            <ul class="top-bar-actions">
+                <li>
+                    <a class="top-bar-home" href="/" label=Home><i></i></a>
+                </li>
+            </ul>
+        </div>
+
+        
+            <div class="top-bar-right account-state" id="top_bar_right">
+                <ul class="top-bar-actions -cx-PRIVATE-NavBar__topBarActions -cx-PRIVATE-NavBar__topBarActions__">
+                    
+                    
+                      
+                      <li id="link_profile" class="link-signin -cx-PRIVATE-NavBar__signIn -cx-PRIVATE-NavBar__signIn__">
+                          <a href="/accounts/login/" class="loginLink">
+                              <i></i>
+                              <strong class="-cx-PRIVATE-NavBar__signInText -cx-PRIVATE-NavBar__signInText__">Log in</strong>
+                          </a>
+                      </li>
+                      
+                    
+                </ul>
+            </div>
+        
+    </div>
+</header> <!-- .top-bar -->
+                            
+                        
+
+                        
+                        <div class="main -cx-PRIVATE-Page__main -cx-PRIVATE-Page__main__">
+                            
+    <div class="error-container -cx-PRIVATE-ErrorPage__errorContainer -cx-PRIVATE-ErrorPage__errorContainer__">
+    
+
+    <h2>Sorry, this page isn&#39;t available.</h2>
+
+    <p>
+        The link you followed may be broken, or the page may have been removed.
+        <a href="/">Go back to Instagram.</a>
+    </p>
+
+
+
+    </div>
+
+                        </div> <!-- .main -->
+                        
+
+                    </div> <!-- .page -->
+
+                    
+                    <footer class="page-footer -cx-PRIVATE-Footer__root -cx-PRIVATE-Footer__root__" role="contentinfo">
+                        <div class="wrapper -cx-PRIVATE-Footer__wrapper -cx-PRIVATE-Footer__wrapper__">
+                            <nav class="-cx-PRIVATE-Footer__nav -cx-PRIVATE-Footer__nav__">
+                                <ul class="-cx-PRIVATE-Footer__navItems -cx-PRIVATE-Footer__navItems__">
+                                    <li><a href="/about/us/">About us</a></li>
+                                    <li><a href="https://help.instagram.com/">Support</a></li>
+                                    <li><a href="https://about.instagram.com/blog/">Press</a></li>
+                                    <li><a href="/developer/">API</a></li>
+                                    <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>
+                                    <li><a href="/legal/privacy/">Privacy</a></li>
+                                    <li><a href="/legal/terms/">
+                                      
+                                          Terms
+                                      
+                                    </a></li>
+                                    
+                                </ul>
+                            </nav>
+
+                            <p class="copyright -cx-PRIVATE-Footer__copyright -cx-PRIVATE-Footer__copyright__">&copy; 2023 Instagram</p>
+                        </div>
+                    </footer>
+                    
+                
+                <div id="reactModalMountPoint"></div>
+            </div> <!-- .root -->
+        
+        
+
+
+        
+            
+
+            
+        
+
+        <script type="text/javascript">
+(function(){
+  function normalizeError(err) {
+    var errorInfo = err.error || {};
+    var getConfigProp = function(propName, defaultValueIfNotTruthy) {
+      var propValue = window._sharedData && window._sharedData[propName];
+      return propValue ? propValue : defaultValueIfNotTruthy;
+    };
+    var windowUrl = window.location.href;
+    var errUrl = err.url || windowUrl;
+    return {
+      line: err.line || errorInfo.message || 0,
+      column: err.column || 0,
+      name: 'InitError',
+      message: err.message || errorInfo.message || '',
+      script: errorInfo.script || '',
+      stack: errorInfo.stackTrace || errorInfo.stack || '',
+      timestamp: Date.now(),
+      ref: windowUrl.indexOf('direct') >= 0 ? 'direct' : windowUrl,
+      deployment_stage: getConfigProp('deployment_stage', ''),
+      frontend_env: getConfigProp('frontend_env', 'prod'),
+      rollout_hash: getConfigProp('rollout_hash', ''),
+      is_prerelease: window.__PRERELEASE__ || false,
+      bundle_variant: getConfigProp('bundle_variant', null),
+      request_url: errUrl.indexOf('direct') >= 0 ? 'direct' : errUrl,
+      response_status_code: errorInfo.statusCode || 0
+    }
+  }
+  window.addEventListener('load', function(){
+    if (window.__bufferedErrors && window.__bufferedErrors.length) {
+      if (window.caches && window.caches.keys && window.caches.delete) {
+        window.caches.keys().then(function(keys) {
+          keys.forEach(function(key) {
+            window.caches.delete(key)
+          })
+        })
+      }
+      window.__bufferedErrors.map(function(error) {
+        return normalizeError(error)
+      }).forEach(function(normalizedError) {
+        var request = new XMLHttpRequest();
+        request.open('POST', '/client_error/', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        request.send(JSON.stringify(normalizedError));
+      })
+    }
+  })
+}());
+</script>
+    </body>
+</html>
+
+2023-04-02 16:26:38,999 - instabot version: 0.117.0 (api) - ERROR - Error unknown send request
+2023-04-02 16:26:38,999 - instabot version: 0.117.0 (bot_follow) - INFO - v not found / closed / has no followers.
+2023-04-02 16:26:38,999 - instabot version: 0.117.0 (bot_follow) - INFO - Follow followers of: i
+2023-04-02 16:26:39,283 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/i/usernameinfo/ returned response: <Response [200]>
+2023-04-02 16:26:40,844 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/26911/info/ returned response: <Response [200]>
+2023-04-02 16:26:41,459 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6 returned response: <Response [200]>
+2023-04-02 16:26:41,971 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBMjFPTy1xeU52WGVFOVExMzJmSVYtLVRRTjYxZ3A2QmNtb1NJQWlYMjB2M05halJkTTlvUXRTbjhMMjdvTjcwUnprdThuYWxNNzVGaVgtQWw4d3NLOQ== returned response: <Response [200]>
+2023-04-02 16:26:42,483 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCTXhrUUdGLVVvRk9FRFV5R3lCRVVJWXlGazd6NXNBYnE5cEJTVjVhOXFEczE1YjVtNy1TVjhlLXRVbHJXa3BNVS1EUWJhOVFOQmxUalp6aWN1aXIyVQ== returned response: <Response [200]>
+2023-04-02 16:26:43,007 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEc0dYRzJEb1N6WWFVQ2pfQkE2UmZscEMwbnJ5Y2pMTi1MNzhQUjllaUNSWndCZVBOeDBJOXBzb3JVelRGYmxubFBveWpPN3dyOUtVbWwtVmVIV1JSdg== returned response: <Response [200]>
+2023-04-02 16:26:43,708 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBWm8zMFAwcWJGNWNnRkF6amIwQzA1bUFXQW92SDdmclRuTXBHYVRVTnpxREk1Z2kySm9Zd0pTZHhsTElrRm90Q1RXRlY3WE5IUWhEaXRFdTUyLXk4Qg== returned response: <Response [200]>
+2023-04-02 16:26:44,106 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDWkFGSGZ4LTVmTlp0QkJjVFRRa2NpTEZhMVotb3ZaMTJMQmNoOW45NXpnTDczcHV1MGNFU0NNay1fLUVhSzB3SjRDXzVsclV6eTdxYUdOZFNkX3JDTQ== returned response: <Response [200]>
+2023-04-02 16:26:44,633 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBZ256SFhPREV5RXk2SnpPT0FSam9XdU9yME8yUHdTbl9oOGtiYUxUVWd1RzZPRVNNSXpNOFp4TklodFRUbkxmS3VzRDlvQXF5eDdBY3htSVFxejZMNg== returned response: <Response [200]>
+2023-04-02 16:26:45,067 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBbkp1dVUtSGFkVzE4WHN1NExsTzVBWTY1WDZyNFRGMHpyekJkWXFDRDFBU3FUMW9CZ2tna09HcTFOazI0S0FvVkRhOHJzRGNLU1FLeWU3aHRwMm84eg== returned response: <Response [200]>
+2023-04-02 16:26:45,555 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFERk1JN1lGY1FNWlNjeXd5UnRacEF6a3RJUklKdUFoQTBMczVpdjNRUUktc2ZKWlpqR2M0UTJrOWhnRWVCaURIYnV0YTl3Zy1CejRMUHFHc21YWm55NA== returned response: <Response [200]>
+2023-04-02 16:26:46,067 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCNGRUSG95RzNOR2xRVnRLc1ZLNm9SdHJtNHdJZUlsWExSajlQeDJHakpvR3NVREI3YjdNR04td2VrLXJVX1h5cEFXamxmc2pjM0k4Vy1ETUlCelhXeQ== returned response: <Response [200]>
+2023-04-02 16:26:46,580 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCY0tFci1uM05vYWVhYkwxbTc0SFBjakswbHRKcHRzdVp0Nnk2RDd4b1A3cV9RMnNBWjlSQUVsUlA2ajBkbjFhUnFuYXE5OFZYTjhIMk9yeXRvaThIcQ== returned response: <Response [200]>
+2023-04-02 16:26:47,052 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCbUltTXEyRXEtMjF6XzUtUmdDNXlwdVY3RzRFUGVPc19YZlZLc3VTSE9BQ0xvWDUyMGx2V3g1T1dlM2hiQ1pRR1EzMlZGUEJmZ28xRGoxSG40TTdqSg== returned response: <Response [200]>
+2023-04-02 16:26:47,497 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDbUY1amVIdzBJSzVnZTE2MVVlbDhNTXpLLUdKX0VaT1p1Y1ZHVDlZcFl5TzJNT1htR1pOTkZPNHF4VkliOHBoSlZfaFNLRi1Zdmg3VDV2WURWampHOA== returned response: <Response [200]>
+2023-04-02 16:26:48,005 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDX1lDaDZ0TElONVBMaXh6VTdzTzZaQXA2bThPanZTbUhQWFRxM3pGLXBQVWM3Q3BhRXJ6NXJ3UjN5WkRFd0VWbTdYQUZXU1BHN1FnSjFYQkxXQ05Waw== returned response: <Response [200]>
+2023-04-02 16:26:48,526 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBLXBPVlFoaWd3Zk0ta2U3eEtfTHdrNDRyZWVjdWxJUWFMNFBwMDFlNnl6UEwxamZaTlVFZkJtUURRa1lJMGpGWEtsa0oxWFRsRTdkS0JCQk1FX2xJLQ== returned response: <Response [200]>
+2023-04-02 16:26:49,061 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEbUJTM212M1Y1Q21nMno1empOZlA1UURIUkRWNGQzSXNpOElOUE53d2dTdWlSMHpKOGdGSmp4YTRSRWdsaVZjaWxlSWZHNmVCeTliN2JJZWJXbC1LWg== returned response: <Response [200]>
+2023-04-02 16:26:49,652 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEYWtQZmtKejh5WDE5QThiZV9IczViNmpzc19WYW92eUM5Zmt2ZWRBS2l4eWcwMGNWLW5zZThWVzVGY2FONmZuNjZrOUl1eGN2OFFwQlZmVHZVSGNEMg== returned response: <Response [200]>
+2023-04-02 16:26:50,107 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEc0RLWWhlcWZzTng3eENBSkluS3hsaGVKUllveGdOaU5wZkd3Q1hBZmZMUUlOcWItQlFyaFZkd3ZzVjlqZ09WNHZ6ZUpDY2xPYzVtcmFadzVPUVhDbA== returned response: <Response [200]>
+2023-04-02 16:26:50,708 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDMEpDajVNeWdtMlAwUkZmOWFRRzZ4OWJDTWVGY0FLTDdXMm56MTJyX2x1MWM5d2ZJcVVaNkl6QmVvSjBEZEtBdWJyaXNiY3B5VEJzUTFxSzlGcEhncg== returned response: <Response [200]>
+2023-04-02 16:26:51,153 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFET3dvcDF5SEhlbXFwT3dVOE1GQmptS0s5TndOVGNPek5NM0JHXzFvY2pLdnlkUTRQUjUyV3EySTVwcDNianBxcFpabzFwOU03SWIyMW9UQ05Kc2RoaQ== returned response: <Response [200]>
+2023-04-02 16:26:51,628 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDTTI4U1o4Rm1XV1o1SHJjOGpvTUJBVmd4al8yNG03WDdkRjlQTVl6cWFmWmRtaV9pNUxrQ25TM2ZIYjJJZlJQd3kwZ2YyQXFrZlc2ZFk4WFRLN2JvTw== returned response: <Response [200]>
+2023-04-02 16:26:52,249 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCYXhhREdoMTNMUldMY29EV283U2JXX204V1p0T3c4OWRzOVZVUjFjMFZEOFo1ZHFNLVl1S2V3aVhRSUwxdkVRZXltcktlVmt2OWdGRTVsY0l6S3A0dQ== returned response: <Response [200]>
+2023-04-02 16:26:52,943 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEaFVPLUpnb0VlX0JzQ1dYd2lZREdLbXB0T1Fqd1hTdkQ2M0o0QVZEd1FyMUQ5ZF80WEoxbVZObGVUYVMwZUdNRERNSTdDSzZEVEs5SjhzY2RNVkxfTQ== returned response: <Response [200]>
+2023-04-02 16:26:53,543 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBWS1ERXhzMWo5YlhZMGJ1ZlJlYVhtS0NPOU43cGVCbEI3cGxud1pxUlEzTm1YaWh0bzRrb1JrZkVFM0J5eVFNRmNSVF9tU1VXMkx2eHZIWnpyU2lHbA== returned response: <Response [200]>
+2023-04-02 16:26:53,975 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBWENuakxVc3JySC1nRmU5UzRJdjNpRGY5Q0dRSENob1Z5ZjV6Z1A0dDJnSEc1TnVUeUJudHVrSkxveVNZRjJNNnFjUElWUHpObDBkaEhRdEVxRVI0eQ== returned response: <Response [200]>
+2023-04-02 16:26:54,569 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEbjBOVjdqbDZwMFZ2Z0h3c3BBM3FWZGxZVFNuWjVLR3g5MDdfUFZRMmxPcjdwWUc4RXpKLUhSZWRNemZVZXVmUmFyNHBJSDFlTVNSWjdSSG5KQ2dUNg== returned response: <Response [200]>
+2023-04-02 16:26:55,177 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBaU9mTGFSOFBFRktGUGNjaGJOMUtnTktvUF9pSHp0WUwzV1o0ZTRUcUhTVnJNUlMxTFRQa21wOWZCUmoyeVdXdlg5VExfdjh1Rk5GVjh2c3hZZUdkbQ== returned response: <Response [200]>
+2023-04-02 16:26:55,793 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCRkRoZTJzUEZhS3VBZFdRY2h1RXEtZEVJcHZfVEFOQjFDOVFsWEp2VHlUaHY2WjVIbnhmSlR3RERvQlhMSmg5bWJGRGR6Y3J0UXBZQ255M3RmRUNvNA== returned response: <Response [200]>
+2023-04-02 16:26:56,226 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCYWVFSmtVTFNpeERCdEhvZWVMSTEzaVdUcHZlZ0U0QUtNSjdrdDVjZE9rMVJzc0RocEpNLXZyYTNvcy10bklfR0R2NzhuZlpLRGpfZlRyRHZxTGpZVA== returned response: <Response [200]>
+2023-04-02 16:26:56,836 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCdHYxMktvZm1kMExJSklNSEx3aF9oWXdyUHBtbTRyak5jWUlPWDZTTk5mTFdSRU93ZWtTUFI0dWJVOFdEYTFHd3BxMEd1aGpHeXlMYy1QNGRZQURtTA== returned response: <Response [200]>
+2023-04-02 16:26:57,446 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCS3cyam5VNTZiSDk4VXdsdllqQkFqdWZ5cFlBT01yaXlmVjhnNTlzZGlGSXFlcHB6LTdIeVhOdlM1bFNBOVJhdXQ4UXNOZEdFa0RBMjZ1YzhlTm5HNA== returned response: <Response [200]>
+2023-04-02 16:26:57,945 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEUDBhX3ZHQTBLSTVIS2k0SVVyYVF2S3BlWGVLcU90dkhTRUFPOEFUU3RyUmtzcWNta0dwbjd5SXFlRUtuNzI5TkJVV1hCb3F0SURoeFhTT25tZnRtYg== returned response: <Response [200]>
+2023-04-02 16:26:58,457 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEbnlBQXRuOHU1WUJHUWNvbU9PSnRXNVd0cnA3cy1obl91bkZNWEFDdFNRWF8xMWtiUDFRTnFxV1pjYjgyNEhEazJCX0xPYWVZTXdZYl9nUzhYVkpjZw== returned response: <Response [200]>
+2023-04-02 16:26:59,087 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCbVczczNNVWtNaFdmbWtnWjRWZG1MbUZwOUdVbk02S3dyT2JZYTA1Nl8xQ2hlWlJCbXlyQzRpcnFLeFdDb2hhb3pwYk9USG9rMVZnQ3JVSGlyUUVZZQ== returned response: <Response [200]>
+2023-04-02 16:26:59,687 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFERUVBc21ERXh6QmN3QzJvNXdjb3BueVlpUkZSQkc0V1I4dlh3dlp4ajBxRjItNDA3NVRaY21UellmbzZicXV5S0s5cm1vNnJmdlBvR25lSlRib3V5aQ== returned response: <Response [200]>
+2023-04-02 16:27:00,204 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCUE9fWkJnVm5nU1dvejNQUDNueG9udUJxOHJzejFxdjNlSFdvZGhzR0xid2VscnNKcmMzTUlNdVZOem9DamR5SkJuQm03cUhBLUpOdms3SWEydVRKMg== returned response: <Response [200]>
+2023-04-02 16:27:00,712 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBMnQ2TjF0ZWcwd1RYZ0J2MWN1SllnVW8xeUVNbTlhQjZoWkpvUGxOTUM2a2ZIRlJrVnZjNE56R3hRZU0tTlV1YzFldDJ2M2ZNWFM2WnRmYS1CalpkQg== returned response: <Response [200]>
+2023-04-02 16:27:01,137 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBSlFCdG01Ynl0N3poVHRPbmowTEtfblBCZm9HRHd3dmt5Yk9kb3ZTMFd6cERFX0x0VlRsQ28tajlYeEFiYzhqQy0ybWh1bVBqZ0JJdWliU2ZDbkZHRg== returned response: <Response [200]>
+2023-04-02 16:27:01,632 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCM3hTZFJKZ3RKVDRRNW5LdTRUQ3NuSW84YWtFSkNPTzI3RktUUnltcHliQzNSZi16aHU3UnlSVEtrX3pYcTlPZ1ZKQ0V2aDltOG9pdDRLMkx6RmtWaA== returned response: <Response [200]>
+2023-04-02 16:27:02,139 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEbExlVG1qYktjZU5KRE42UHJzUHhKMGxYTHYzVnVYTnF4MklVTG82OVNIRFNERG5JV200eWFPMWowZnJBRDhCTWhnbzhWaGs3d0U2cHdUMTR5M3dXVg== returned response: <Response [200]>
+2023-04-02 16:27:02,656 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCZ09UUThyTHpkT25XRTFuMUJXc2xrNzREbW1sYzkzLTJMLU4wSzc1d0lCclF5RGY0Y3VoTXFFYzloZDUzWWstejhHMUtkcDczUlNtLVlZQkZReWFlOQ== returned response: <Response [200]>
+2023-04-02 16:27:03,122 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDckRfVDNyR1d5Q0ctd2Y1LTFjVVNnRmpzQ0VRa29mYmJ4UlUyOVVVZU10X3lSSXlfa29iYWpueDQ0T1oxRW9mMGxTOUF4dzV6X09BTk9BYnQtTmE1cg== returned response: <Response [200]>
+2023-04-02 16:27:03,679 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEQTg0M2lfd3VFMnNXNk81STRSVFRfNGx6cWE5TkNuWDdqaTJVY0RMM0RMN0hKYXJlYmh1eTdLeWVQZFE3ZFQ1YWNOdThZT2k0M1NNb1FTVWpMR2NJbQ== returned response: <Response [200]>
+2023-04-02 16:27:04,310 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCQXhQQ1B5T2p3XzdBZG1IREZwdG5IZnB6amJoMjNXY2tKZlQwNXZJamhxdVhILWJWVHJleHFUTmRqRzcxN3J0ZkpPeFFseDRaNFNISFVNTlJTb2YyNg== returned response: <Response [200]>
+2023-04-02 16:27:05,431 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCUEt6WDBBeV9teWdoUVoxQV9KTjloZExJY0FpWFk0am1jemo0Z2NjX0Vsc0t6Mm9kWEROZ2h2VVktSUxfQV83TThfR2hBU3hsbU05dnRBLVc5MlI1eg== returned response: <Response [200]>
+2023-04-02 16:27:05,896 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBekx4d3FKQm5FV0d3UnA3Ui1VVGNUaEI0dDc5ZGZMTnRsOG1XU1BPa3I3WWNWSkl0aU9WYkc4ZTBVYWp4ck9lc3ZVUVBKczNNQVY2UlpWa3o3ZXh6Sw== returned response: <Response [200]>
+2023-04-02 16:27:06,549 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBOGRBX0ZiNjJ0UlFwNkJZWktLZVctU1hpd1BvUk10UTNoSUVhRHU0MVVDX0dmME5fNUc3QWpQb0ZSQWVSN3RxWUxMaFp2ZVZzaGZZMEhBcXdSdGhubg== returned response: <Response [200]>
+2023-04-02 16:27:07,254 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBakRmSFkzQUppQWc3VTRhaHcwd296RlRkOExIQXY0d3doQmo0SDZxMVNKdmUzM1pJWGJXOHU4T0FNRVhiUjRpQjhOVzVQV2VJZEZBQzB4SFlORDdmNQ== returned response: <Response [200]>
+2023-04-02 16:27:07,752 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFESGF3OUtSZnRQbVEwNktCS19fdi1YS0lYRXEtdUNzaVhBc1FSTmFfUmhlNm9oUTcxdGpKNGF3N3VfWklxUVFlOE5qcy00cWEyWVp2b1lGQUozYWVjVw== returned response: <Response [200]>
+2023-04-02 16:27:08,176 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCTWgtbW5rcUw0NW0tMy1RVzI1MUNScmFFdk01SVJpMDBPTXZYUnJHWERlVEJDaFJRQ2RaaHNPMlV5alRfUTUxWkdnTnBROEFYbElkQ3B4c2RjbV8yRw== returned response: <Response [200]>
+2023-04-02 16:27:08,627 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCc1NSRV9nTVA4WHJMWlhUMXdsRFkyRllER3V1aUJyQmJXdjJKTzQ3bUM0T0Y3Y1dvdWZ0eHppX3p5U1lVU3R5REYyU2F1R211cEJmQUVFdjVtbVZyVw== returned response: <Response [200]>
+2023-04-02 16:27:09,212 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDWE1hM3R3b25VbzJVTkg3bFFIWjlzY1V5R1Z2SmswYTVOdkhabE1EYWlLcFZ6VWxac241S2NqdkV2Z0l6dnZ5cVNVNkxBUnVCT0MxajdmQjNuMHdUZw== returned response: <Response [200]>
+2023-04-02 16:27:09,845 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBVlVJb0xUYmJPUmhlQVhhOHNHdzJZcDRRcktQWGlIdmh4cUxtZFRqRkVTZGx5cW9iSmVFRUJFODZrVjVnR2dfaUdpM3ExdVJKaC1USlg1VDNIVXdONg== returned response: <Response [200]>
+2023-04-02 16:27:10,565 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCY08yQ3RyWWkwOG1kdTBaY2x5enlMVHBiSDFWckZEUVA0TmVweFliX0ZwRXk1M3pqUTFZXzFvSU0teG04cUM2bmhodUowbG9OQ3dhTzRkalAxXzZBMQ== returned response: <Response [200]>
+2023-04-02 16:27:11,070 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCUnQyeWNZR1RTNHpsMmhOaDVqSVo2ZXR4UFVQVXVyYzVvV1F0QXB4ZHR2Nm1HWnRvR1Y5LUxuM1FKck40UFY4aG5DUVVBWk93WkRJa21NZjVvanVfdw== returned response: <Response [200]>
+2023-04-02 16:27:11,471 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFERVVOUjA2TkhqZnl6NEJqN3FOZ1lXMmdNN3FTY1lJOHhpellWa2JqQzlOOElPRk5LbXNWM2JRaVkyaGF3YVRxcTl1Y0RZdWRKRmx2V2oxci00V3QteQ== returned response: <Response [200]>
+2023-04-02 16:27:11,877 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCSXNxMWlIN2pPeVhneVNSRWNleXN3N3JNSlJrNVN3Xy1QWDZBbEFRZk5PWjhYcDFRU2xQdTZuTWMxMlJnS055TXhaZGNYOGh6LUcxZ3NodmtodjhOOQ== returned response: <Response [200]>
+2023-04-02 16:27:12,374 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCVE51NkJTdTVtbkkwYnhrLUh5cldEXzF5dGNxNzd0Z0NQR0hXUGhsM1Fndnk3SWliWXJ0ZEQxTVVHUXBmUDgxQVhJYVV4S09NT0ZjRkhXSFVYZ2NOUQ== returned response: <Response [200]>
+2023-04-02 16:27:12,898 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEeEg0TXl1TThiM1BaUmZBSkdJVWFLczVIRVlRdTBvbzhWZDNMM043WmhnZ0ZxYW9DSHFTV2tNem5rTlVRVllXWmUxUnBXMUNLWXFNY0dFckRzYTdkWA== returned response: <Response [200]>
+2023-04-02 16:27:13,375 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBQlVGWE5ySlBDWExwejdsV2xrdVFFa0ZsbGpYRE5kSW83YmNWOTF3enB1RHI4dXVGY2poVnd0T3lUWUp2OHYwR2ZtNUY3OWh0Wm5oQ2tYY0tNTU94WA== returned response: <Response [200]>
+2023-04-02 16:27:13,790 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCRHJENTh5MGRoVTRqb1FNSHZDV0hBeW9fUS1Ed29ySzBKTW9jMzV5OHhJNXJTOGFleTZvXzdCYUliSGxpd0FvSEcwR3dEQlVwazRfYUNYVFJpSkVaNw== returned response: <Response [200]>
+2023-04-02 16:27:14,282 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEU29WWWdxSS1VRzlHQmtiRFNnLVFqVmhtZkJqQnplN3pZS3JraUJ0bEptOHpMUENSWkVoaVFZVFRuSlh2NEcwVGhxY25Ea3pIeDYzcFFEcUhsbmNVVw== returned response: <Response [200]>
+2023-04-02 16:27:14,753 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEUV9UNFY5MGJTdkQ0RGl3MkE5QS1ZeTg5Q1EtYW05OUpIdFFQSWd4SjZhYTJVV0pxcUpKV0o1WnNJWFBPNzhYS28tTkJJSFJqTDlTS08zU09WZ1R3ag== returned response: <Response [200]>
+2023-04-02 16:27:15,254 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEUi1rZVJ1MU40NU9nUXdaNW1Uc3dBaW04OWRnaE1hTjRrQlh5dmQzdEZiQ2cyTFNpTVN5QjBoQlFjR2JnSXVzNmg2LTZ5SkhpYWVqZlYyQlNfYkYyNA== returned response: <Response [200]>
+2023-04-02 16:27:15,807 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCdlpaWGF6ZlVGNmFlZWx3Ti1EdXJyUW1PdURJaFA2VEFsS1FQRmozaW83QlNwVVFTUXR2WWpXQmdDOTJZNWpkOHRxUjRJa0JzSk1DcHJ5NHFFOXlvSw== returned response: <Response [200]>
+2023-04-02 16:27:16,279 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCUzJGM0tqT3hyQ1RUU0d1TmVrUi1oM1dDRFh6RHhMT1dLdlNaTkhJdFhHdGp3Z2lCZ0J1M3c4R0wtUl9BdHIxQUR6MHI0WlFHYTQ0TVZXOGRVY1hQTw== returned response: <Response [200]>
+2023-04-02 16:27:16,744 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEWWJWSUlFNE5hcXY1V1hkd3BzOFRLNHdFc1pzNEoybkdHa0NhMTFrcFRqMnd2UjVmNWl1YmtjbjltSjdBbmtjenp1T0NyRlkxUEVWN01SS3pZUWlBNQ== returned response: <Response [200]>
+2023-04-02 16:27:17,199 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDTEdmTmEzLXk4V2tQNGtSWWdzYVRQcUpHa252LTVOaWFFVEZ3TmIxdmF4MHZ5V0xibFFxcEhrdm5ZNlhwSW81REdKejJxMHl5LVJlMlRsblA2T3psMg== returned response: <Response [200]>
+2023-04-02 16:27:17,643 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDdU83MW5jSENGd094Rkt1M1J3OW5mRl94MTFOLXExVmtpT1JZcWRlSnRsNElNdi1MSjJRcHpXdkZxVmRJSXZTZmxUN0ZwNlFXampueGZhS1lvbXRXWA== returned response: <Response [200]>
+2023-04-02 16:27:18,222 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBMFJweWZndFJGRWR6S0pqSTc3M19jbHE0cGRzU1V2R1hsbC1KVjF6VktoUUc4cUxGQTJZQjdqNkF0OHJ6MTlpdWpwU0FSS2lGcGRyOWFqQW4tOHhpcg== returned response: <Response [200]>
+2023-04-02 16:27:18,685 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFESFRzWGZMOENHU1djaWZOTlE5azFfcjZmVVdNQ2RsbldHM3Z0QjNtQmFGM1ROYWJleDJRM0Y0azRrZzdLMllucHdhSzBYUThfcmNuYWcxYzM5YkZVbA== returned response: <Response [200]>
+2023-04-02 16:27:19,176 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBNmNERER4MkI0aFBTYlVpMjdxRWlDb2U2S1VzNHhOUDI1OXdXUnBSTVdXdU93M1dZZTQ1TTlROVZrM1lhTzUxTGNvNFdpcEp2VzhPai1IcDc1eWQ0bQ== returned response: <Response [200]>
+2023-04-02 16:27:19,675 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDYi15OVl4cWRxQmtERlAxTGF1ZUVkNzBsZHdEc3UxSktWR29oa2hvMThzalBnRVYyUzhsTHc0eFNJelE1VUYzUjZGRlNRVTBDOGFnM1Z3ZW1nXzNzQQ== returned response: <Response [200]>
+2023-04-02 16:27:20,275 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEamVHR08xSXFpSWlCS3pwODM2ZlFSNU93QlBoTldicDR4Y1hhMFdhSGg2NmRSR3hhNE5jc3lVU3NoNGVqMUdMQVpDRmNReFdWakFEUTVVX0xJSUlSaQ== returned response: <Response [200]>
+2023-04-02 16:27:20,884 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDVzg1WFliU2pYblV6bWpiaFUzdmJPcE5wZ194MTFUNWwzbmZrb0k2ZnVIQkxBQTlubXRzSFhtekhnc2pUczVCcXFSR3hBd1AwRUw1bmpBQm9TOEpQRQ== returned response: <Response [200]>
+2023-04-02 16:27:21,352 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBOU1TVldsZ25Zb29PLXlSbWtBV1NyVDF5VExkQU50X205dEUyTGRrVzFtVmsyRG5EUFNzZW5abTV6Z2tIYnAxZVlENmFVVllVZnVMaFNzUzFhUnlLbA== returned response: <Response [200]>
+2023-04-02 16:27:21,880 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDYklGM010VW44WnM4VkQ2MlZGWlFGa1E5QThOOEhLckNOU2JQSVh4bXZOS3hNWWNSTlcxNklRa0dwdEpGMkhjeS01bk81QTh0U0NrUERBcWh5M2d5aQ== returned response: <Response [200]>
+2023-04-02 16:27:22,363 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCNWlnZ3lpZVgtUzZhcDE5MGZ5NmkxWjVPVW81b19oZXo4U05zOHBPVFNRbW44TUVGTWpwWVNwSzF4bURlRGpwVjFzQUdBbTJIb3VtVnZMUGZXaHVJSQ== returned response: <Response [200]>
+2023-04-02 16:27:23,034 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEVTg3c0pOUFpWeUhfZUM0UVpxbklNekNxMHdNa05nYmxsaXI4cXpwakpONTd6QTJ1OXhSZm13X3h3ZHRwczhXUU9oc053YlV2UEg4azV6cVAyNU1sWQ== returned response: <Response [200]>
+2023-04-02 16:27:23,507 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCenRDVy02LUhDRHVSRTdncVJsSTFkZDZLNnBRUUFMTWlSUVlscGdSUnRsMW1EUkczNURsT1VFNHRkcF9CTTk2aHlZXzl3X1FrdzVhMlJOODk3ZnY0Sg== returned response: <Response [200]>
+2023-04-02 16:27:24,062 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBNUN3aTZ0YnhYb1dfamxVeTBwSjlVRlF4MXNyaVFKS2Zpd25rUGdFVE56OER2TEZwNjV1VXJTb0JlVXk2WXhlRjlRc2pJNVdXN2M0MG85VkpVcWV2UA== returned response: <Response [200]>
+2023-04-02 16:27:24,672 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBSmJrUk5CaWpjbE82a09mbm50azhzbUFabHBBV09wdzV6ZV9tcnRoRlNjNE5LQ3Nra1JVQXNpZ0U3VXcwX1NoNjFhZmxvMnoyTmsxUHZhNG4xLTBNUg== returned response: <Response [200]>
+2023-04-02 16:27:25,164 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCYi1OTXR6aW1aWV95WUVqVzFYdXhRNTloLWZvMTA0b01kQlRsT3NxTFh3cVRSQV9NQ2hoNUhxOXlRT1ZBT01nY01neWNjRWhuR1QzdGFWTjdDbm5TVA== returned response: <Response [200]>
+2023-04-02 16:27:25,696 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCUTVGaFBtWE93UmFiZV9JS2VOYmtHWURGNGwzejBPdmEzMWhwUTdYVThwZFZhN0hmNHNMUEdWeENHcUNrd2lyVXkzM19GcjNJWHo1N2xPbFM4MXVPWg== returned response: <Response [200]>
+2023-04-02 16:27:26,247 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBOXhpcDJZbXV3YVRDQjM5b3JHZXQxVURvOUYyMzlOTkxJLS10YWlQYlo4ajFSRl9pRXNFN2VZaExrRnZlWGk2TlRRbGwyNjl6eXlULWpQMlZINnlwUw== returned response: <Response [200]>
+2023-04-02 16:27:26,720 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDcVBnOWVrRWRnSFVoQWM0OWNGczF4WHprTW0wd3R6LXlLbEVHRC1Gb1pfR3RmQmVYbzh2UkwtcVA4ZjVselRKelJfaWVQdWdaeE1EbndQb19uUTF5Qg== returned response: <Response [200]>
+2023-04-02 16:27:27,253 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBZTdDT1ZaSFpmcjBxZ01lN2p3dmI4Q2tqcVlhdXV6a0FmY3RSZzFmMFN4VGJoVlZ4azE5MVNSMzVyRUFQazlRYUZFX202dmo1OXoxbnVLOWN2MGlKZw== returned response: <Response [200]>
+2023-04-02 16:27:27,643 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCY052QzdBV1p6UVhwWTdjU0swbTFUYXB0ckJ2YmpraEU3aV9IR1UzcnI5MmRCZ1F5S3ktOUM0bEJmcGJrQ19OTkJZX1lMMzNwR3U4NlBGNFJvOHNIUA== returned response: <Response [200]>
+2023-04-02 16:27:28,155 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCNUZWQTFqaFRTMWdUTXJmRG1fOWZPTFNoUGFWeFVFWkFCTzdRbWt2TU5EMmpNYkhhdVJmNHpFWHdKdVluR3YxN2NMLUNLdk4wWl9NWWgxWklZcHBJZQ== returned response: <Response [200]>
+2023-04-02 16:27:28,594 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFESTJpanh6OEgzdlF0azJWSEU5Q0FwUTdsZEFfWTB2ZTBVamZxYzFFZGotdVE2VlRndkVHMTZyMlRVai1wNWdjNmI2REo3QUE3ZWVaM09GZG1tMVFjaA== returned response: <Response [200]>
+2023-04-02 16:27:29,031 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFENXhpNUJ1V1ExSmJBcEZEaC1KUUVDMjc5SDdMd0xxclVmT3NOUnllc3U5X2RJMUJiaXBiRTYySkpkOVpYT2ZaUVRtc3I5bEU2aWxraHNlZ0lacUxrbQ== returned response: <Response [200]>
+2023-04-02 16:27:29,690 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBLWw1Q19MeUZBNDZ1S3JHMDZGdWlUdUdrV1pNUTYzaTVrVjJJX2xfRnBkSFlfYkJDY2VNX0tZZ0lwb1Nud2ZGWVd5Y3FnVWlRdkJ2b2tGSkFTU3AxRw== returned response: <Response [200]>
+2023-04-02 16:27:30,149 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFEdXdTX1J0M2xLRDhRd2g4Z0VpZUR1Z0N4VFlXNlRueTBDOGpuUmdmT2t2UlU3ZGhfRXFteDdQV056VHlHRno1SzkyYUI0WndtXzFkaDB0WFUtX2JKNg== returned response: <Response [200]>
+2023-04-02 16:27:30,738 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFCWnNKLUpsanpTRmdBbVVPNVpSSlc2clNtN05FMjE0VjlRczd3MGFiTWpQUGg0RmlUQmRhRUtBN1g4c2lRLXVZYV9sRVNIMmFnTXphaHVTMjFGMEdQSw== returned response: <Response [200]>
+2023-04-02 16:27:31,296 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBUXVCakV1d0J1VDQ3VFFGd0pnWnRGUlE4eTAxN3AtQ1NkZTdoR3p6dlZ2cnlnSklWWXNDcnVoVEx5QUlmOGcxTXc4TDMxaHo0U2dWX0lhcjYyb0toUg== returned response: <Response [200]>
+2023-04-02 16:27:32,395 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFBR2lrLWNQbERUeU1vbEVJVGljaTlBbkpoZE5PRmdHc2FFUHVPdGRMLW1YOENRelc1eXVSdHpINmhBN21MeHlLU2drcVBfbms0dmZvX1BtLUpSeWhVbA== returned response: <Response [200]>
+2023-04-02 16:27:33,070 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDcjlERTAybXJRZi1rdkt2V3NEa25iTUZoOEJSazNoVU55cnh1ZHBoVkxnS2xqS1M4c2UtT2V0dlh1OFg4UXJvdzZ2UjJmdmFZbEN2RzlocENSbzNPWg== returned response: <Response [200]>
+2023-04-02 16:27:33,476 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/26911/followers/?rank_token=520563360_41a4dcce-debe-46e3-834b-cc01765883e6&max_id=QVFDT2o4aGIwY2E2T182ci1aSHVTOV9nOG9Lbk1aMmQxQnJTbGdXSEdHTGRxTUVIVlh6bENzWVVuMEhPQ0c2a19vZkE2eHEyaVdJY2dIVWcxUjk0emtmeQ== returned response: <Response [200]>
+2023-04-02 16:27:33,892 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: /Users/apple/PycharmProjects/binance/ig/config/trendyground.checkpoint
+2023-04-02 16:27:33,893 - instabot version: 0.117.0 (bot) - INFO - Total requests: 134

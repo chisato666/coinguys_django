@@ -1,0 +1,17 @@
+2023-04-02 16:27:35,849 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-02 16:27:35,849 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /Users/apple/PycharmProjects/binance/venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2023-04-02 16:27:35,850 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2023-04-02 16:27:35,850 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2023-04-02 16:27:35,850 - instabot version: 0.117.0 (api_login) - INFO - Recovery from /Users/apple/PycharmProjects/binance/ig/config/trendyground_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=ecb45ad3-58c4-488c-af43-7abc6a9722a4
+- uuid=41a4dcce-debe-46e3-834b-cc01765883e6
+- client_session_id=d0e56b15-6466-46fd-8687-1802c9cd44f0
+- device_id=android-6c91715238a02f53
+2023-04-02 16:27:35,850 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2023-04-02 16:27:37,627 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2023-04-02 16:27:38,281 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2023-04-02 16:27:38,284 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'trendyground'!
+2023-04-02 16:27:38,284 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: /Users/apple/PycharmProjects/binance/ig/config/trendyground.checkpoint
+2023-04-02 16:27:38,284 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: /Users/apple/PycharmProjects/binance/ig/config/trendyground.checkpoint
+2023-04-02 16:27:38,285 - instabot version: 0.117.0 (bot) - INFO - Total requests: 134

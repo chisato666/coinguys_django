@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Coinview</title>
+        <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    </head>
+
+    <body>
+       <div style="border: solid gray 1px; padding: 20px; width: 600px; margin-top: 20px;">
+            <h3>Back Testing</h3>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <div style="padding: 10px; margin-bottom: 10px; background: pink; border: solid red 1px; color: red;">
+
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+
+                {% endif %}
+            {% endwith %}
+            <h1>Result</h1>
+
+
+            <h1>{{ profits }}</h1>
+
+
+            <form action="/buy" method="post">
+                <input type="text" id="start_date" name="start_date" placeholder="eg. 2021-01-30" />
+                <input type="text" id="end_date" name="end_date" placeholder="eg. 2021-01-30" />
+                <input type="text" id="period" name="period" placeholder="eg. 2021-01-30" />
+
+                <select id="symbol" name="symbol">
+                    {% for symbol in symbols %}
+                        <option>{{ symbol['symbol'] }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" name="buy" value="buy" />
+            </form>
+        </div>
+
+        <h3>Settings</h3>
+
+       <h1>{{ line }}</h1>
+
+        <h3>In Value</h3>
+
+       <h1>{{ in_value }}</h1>
+
+
+        <script>
+        //var binanceSocket = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@trade");
+
+        var tradeDiv = document.getElementById('trades')
+
+        // binanceSocket.onmessage = function (event) {
+        //     console.log(event.data);
+
+        //     var messageObject = JSON.parse(event.data)   
+
+        //     tradeDiv.append(messageObject.p)
+                 
+        // }
+        </script>
+        <script src="{{ url_for('static', filename='chart.js') }}"></script>
+    </body>
+</html>
