@@ -25,8 +25,8 @@ variant_image=8
 
 count=0
 
-img_link='https://fe2a-182-239-120-1.ngrok-free.app/photo/280823/IMG_'
-excel_file='/Users/apple/Documents/Documents/Etsy/230823.csv'
+img_link='https://9c05-182-239-122-133.ngrok-free.app/photo/watch/gucci/IMG_'
+excel_file='/Users/apple/Documents/Documents/Etsy/251023.csv'
 photo_ext='.JPG'
 
 data = {
@@ -95,7 +95,7 @@ data = [["" for x in range(w)] for y in range(h)]
 #The spec
 sepa=";"
 
-with open(excel_file,encoding='utf-8') as file_obj:
+with open(excel_file) as file_obj:
     # Skips the heading
     # Using next() method
     heading = next(file_obj)
@@ -251,7 +251,7 @@ with open(excel_file,encoding='utf-8') as file_obj:
 df = df.replace({np.nan: None})
 print(df)
 
-with open('products_export.csv', 'a+', newline='', encoding='utf-8') as f:
+with open('products_export.csv', 'a+', newline='') as f:
     writer = csv.writer(f)
     for i in range(len(df)):
         writer.writerow(df.loc[i, :])

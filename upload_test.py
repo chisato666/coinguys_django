@@ -233,12 +233,12 @@ def input_form(title,tag,price,body,img_list,cala):
 
 #img_link='https://971e-210-6-94-85.ap.ngrok.io/photo/12SEP22-2/IMG_'
 
-excel_file='/Users/apple/Documents/Documents/Etsy/180723-2.csv'
-img_link='/Applications/XAMPP/xamppfiles/htdocs/photo/180723/IMG_'
+excel_file='/Users/apple/Documents/Documents/Etsy/251023.csv'
+img_link='/Applications/XAMPP/xamppfiles/htdocs/photo/watch/gucci/IMG_'
 photo_ext='.JPG'
 currency=6
 msg=""
-cala="fra"
+cala="watch"
 
 my_functions.init()
 a=my_functions.load_data(excel_file,img_link,photo_ext,currency)

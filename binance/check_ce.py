@@ -3,6 +3,7 @@ import ccxt
 import pandas as pd
 import ta
 import time
+import talib
 
 # Set up the Binance exchange
 exchange = ccxt.binance()
@@ -13,7 +14,8 @@ timeframe = '1d'
 
 # Calculate the Chandelier Exit
 def chandelier_exit(high, low, close, n=22, k=3):
-    atr = ta.volatility.AverageTrueRange(high=high, low=low, close=close, window=n)
+    atr = talib.ATR(high, low, close, timeperiod=n)
+
     return max(high[-n:]) - atr[-1]*k
 
 # Continuously check the Chandelier Exit and alert the user if the price falls below it

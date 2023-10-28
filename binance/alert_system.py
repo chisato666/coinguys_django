@@ -293,7 +293,7 @@ def check_all():
         message = ""
         current_price = get_current_price(symbol)
         last_alert_time= last_alert_timestamps.get(symbol,0)
-        hr_high, hr_low = get_24hr_high(symbol)
+        hr_high, hr_low = get_24hr_high2(symbol)
 
         try:
             data = calc_indicators(symbol, "1d", "1 year ago UTC", "")
