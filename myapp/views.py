@@ -33,11 +33,6 @@ def show_alert(request):
     return render(request, 'show_alert.html', context)
 
 # Create your views here.
-def say_hello(request):
-    exchange_info = client.get_exchange_info()
-    symbols = exchange_info['symbols']
-    #print(symbols)
-    return render(request,'backtest.html',{'symbols': symbols})
 
 def check_alert(request):
 
@@ -47,10 +42,15 @@ def check_alert(request):
     context = {'alerts': alerts}
     return render(request, 'show_alert.html', context)
 
+def say_hello(request):
+    return render(request,'backtest.html')
+
 
 def ajax(request):
     return render(request,'ajax.html')
 
+def research(request):
+    return render(request,'research.html')
 
 def submit_backtest(request):
 
@@ -113,6 +113,51 @@ def submit_backtest(request):
     context = {"data": data, 'symbols': symbols , 'buyarr': buyarr}
     return render(request,'backtest.html',context)
 
+def submit_research(request):
+
+    if request.method=="POST":
+        percent=(request.POST.get('enter_percent'))
+        rules=(request.POST.get('rules'))
+        period = request.POST.get('period')
+        limit = request.POST.get('limit')
+
+
+        # symbol = request.POST.get('symbol')
+        # start_date = request.POST.get('start_date')
+        # end_date = request.POST.get('end_date')
+        # period = request.POST.get('period')
+
+
+
+        try:
+            print(rules)
+            if (rules == '1'):
+                list = function.check_symbols_with_increased_5d(percent, period, limit)
+                print('list',list)
+                buyarr = pd.DataFrame(list)
+                print('buyarr',buyarr)
+
+                print("rules 1")
+
+
+            # count_profits=((pd.Series(profits) > 0).value_counts())
+            # print((pd.Series(profits) + 1).prod())
+            # print((pd.Series(profits) + 1).cumprod())
+
+            # print(rules, symbol, start_date, end_date, period)
+
+        except Exception as e:
+            return HttpResponse((e))
+
+
+    data = {
+        "enter_percent": percent,
+        "limit": limit
+
+    }
+
+    context = {"in_value": data , 'buyarr': list}
+    return render(request,'research.html',context)
 
 
 def get_btcusdt_price(request):
