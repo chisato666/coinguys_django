@@ -98,24 +98,38 @@ def check_symbols_with_increased_5d(percent, interval, limit):
         data = response.json()
         symbols = []
 
+        x = 1
         for ticker in data['data']:
+            x = x + 1
+            if (x > 30):
+                break
             symbol = ticker['symbol']
             try:
+                print(symbol,interval,limit,percent)
+
                 df = check_symbols_kline(symbol, interval, limit)
-                print(symbol)
                 print(df)
                 size = len(df)
+                print('size',size)
+
                 start_price = df['open'][0]
                 end_price = df['close'][size - 1]
+
+
                 price_change = (end_price - start_price) / start_price * 100
+                print(start_price,end_price,price_change)
 
                 # line = [symbol, round(price_change_percentage*100,2)]
-                if price_change > percent:
-                    symbols.append(symbol)
+                if float(price_change) > float(percent):
+                    price_change=round(float(price_change),2)
+                    line = [symbol, price_change]
+
+                    symbols.append(line)
+                    print('symbol added',symbol)
             except Exception as error:
                 print(symbol, error)
 
-        symbols.sort(key=lambda element: element[0], reverse=False)
+        symbols.sort(key=lambda element: element[1], reverse=True)
 
         return symbols
     else:
@@ -130,16 +144,21 @@ def get_contract_info(symbol):
     return data['data']
 
 
-def check_symbols_kline(symbol,interval,limit):
-    try:
-        url = f'https://contract.mexc.com/api/v1/contract/kline/{symbol}?interval={interval}&limit={limit}'
+def check_symbols_kline(symbol, interval, limit):
+    url = f'https://contract.mexc.com/api/v1/contract/kline/{symbol}?interval={interval}&limit={limit}'
 
-        response = requests.get(url)
-        data = response.json()
-    except:
-        print(symbol, 'error check_symbols')
+    response = requests.get(url)
+    data = response.json()
 
-    return data['data']
+    df = pd.DataFrame(data['data'], columns=['time', 'open', 'low', 'high', 'close'])
+
+    df.index = pd.to_datetime(df.time, unit='s', utc=True).map(lambda x: x.tz_convert('Asia/Hong_Kong'))
+
+    # df.index = pd.to_datetime(df.index, unit='s')
+
+    # df.set_index('time', inplace=True)
+
+    return df
 
 
 # def check_symbols_kline(symbol, interval, limit):
@@ -391,8 +410,18 @@ def get_symbols_with_price_increase(rate):
         print("Failed to retrieve data from MEXC API.")
         return None
 
+interval = "Day1"  # 1-hour candlestick data
+limit=5
+percent=20
+# Fetch historical data using an API or from a CSV file
+# Assuming you have OHLCV (Open, High, Low, Close, Volume) data
+# stored in a pandas DataFrame named 'data'
 
+# Assuming 'data' DataFrame has columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume']
+#data = check_symbols_kline(symbol, interval,limit)  # Replace this with your own data fetching logic
 
+list=check_symbols_with_increased_5d(percent,interval,limit)
+print(list)
 # data=get_contract_info('TARA_USDT')
 # print(data['lastPrice'],data['symbol'])
 #print(check_symbols_with_high())
