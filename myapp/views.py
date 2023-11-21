@@ -43,7 +43,10 @@ def check_alert(request):
     return render(request, 'show_alert.html', context)
 
 def say_hello(request):
-    return render(request,'backtest.html')
+    exchange_info = client.get_exchange_info()
+    symbols = exchange_info['symbols']
+    context = { 'symbols': symbols }
+    return render(request,'backtest.html',context)
 
 
 def ajax(request):
@@ -59,47 +62,78 @@ def submit_backtest(request):
 
     if request.method=="POST":
         print(request.POST.get('symbol'))
-        rsi=(request.POST.get('RSI'))
+        buy_indicator=(request.POST.get('buy_indicator'))
+        buy_operator=(request.POST.get('buy_operator'))
+        buy_enter_value=(request.POST.get('buy_enter_value'))
+
+        sell_indicator = (request.POST.get('sell_indicator'))
+        sell_operator = (request.POST.get('sell_operator'))
+        sell_enter_value = (request.POST.get('sell_enter_value'))
+
         rules=(request.POST.get('rules'))
+        custom=(request.POST.get('custom'))
+
 
         symbol = request.POST.get('symbol')
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
         period = request.POST.get('period')
 
+        buy_value=[buy_indicator,buy_operator,buy_enter_value]
+        sell_value=[sell_indicator,sell_operator,sell_enter_value]
 
 
         try:
             print(rules)
-            if (rules == '1'):
-                df = function.getdata(symbol, start_date, end_date, period)
-                print(df)
-                profits, pro_list, pro_count, buyarr, plt = function.get_rules1(df)
-                profits = (profits - 1) * 100
-                # plot=get_plot(plt)
-                # plt.savefig(os.path.join('static', 'images', 'plot.png'))
-                print("rules 1")
-            if (rules == '2'):
-                instance = oo_backtest.Backtest(symbol, start_date, end_date, period)
+            profits=0
+            pro_count=0
+            buyarr=[]
 
-                print(instance.buy_arr)
-                print(instance.buy_arr.index)
-                print(instance.sell_arr)
-                print(instance.profit)
+            if (custom=='yes'):
+               print('custom')
+               instance = oo_backtest.Backtest(symbol, start_date, end_date, period, buy_value, sell_value)
 
-                buyarr = ((zip(instance.buy_arr.index, instance.buy_arr, instance.sell_arr, instance.profit)))
+               print(instance.buy_arr)
+               print(instance.buy_arr.index)
+               print(instance.sell_arr)
+               print(instance.profit)
+
+               buyarr = ((zip(instance.buy_arr.index, instance.buy_arr, instance.sell_arr.index, instance.sell_arr,instance.profit)))
+
+               profits = (instance.cumul_profit) * 100
+               pro_count = ((pd.Series(instance.profit) > 0).value_counts())
+
+            else:
+
+                if (rules == '1'):
+                    df = function.getdata(symbol, start_date, end_date, period)
+                    print(df)
+                    profits, pro_list, pro_count, buyarr, plt = function.get_rules1(df)
+                    profits = (profits - 1) * 100
+                    # plot=get_plot(plt)
+                    # plt.savefig(os.path.join('static', 'images', 'plot.png'))
+                    print("rules 1")
+                if (rules == '2'):
+                    instance = oo_backtest.Backtest(symbol, start_date, end_date, period,buy_value,sell_value)
+
+                    print(instance.buy_arr)
+                    print(instance.buy_arr.index)
+                    print(instance.sell_arr)
+                    print(instance.profit)
+
+                    buyarr = ((zip(instance.buy_arr.index, instance.buy_arr, instance.sell_arr.index, instance.sell_arr, instance.profit)))
 
 
-                profits = (instance.cumul_profit) * 100
-                pro_count = ((pd.Series(instance.profit) > 0).value_counts())
+                    profits = (instance.cumul_profit) * 100
+                    pro_count = ((pd.Series(instance.profit) > 0).value_counts())
 
-                print("rules 2")
+                    print("rules 2")
 
-            # count_profits=((pd.Series(profits) > 0).value_counts())
-            # print((pd.Series(profits) + 1).prod())
-            # print((pd.Series(profits) + 1).cumprod())
+                # count_profits=((pd.Series(profits) > 0).value_counts())
+                # print((pd.Series(profits) + 1).prod())
+                # print((pd.Series(profits) + 1).cumprod())
 
-            # print(rules, symbol, start_date, end_date, period)
+                # print(rules, symbol, start_date, end_date, period)
 
         except Exception as e:
             return HttpResponse((e))
@@ -107,7 +141,12 @@ def submit_backtest(request):
 
     data = {
         "profit": profits,
-        "count": pro_count
+        "count": pro_count,
+        "period": period,
+        "symbol": symbol,
+        "buy_value": buy_value,
+        "sell_value": sell_value
+
     }
 
     context = {"data": data, 'symbols': symbols , 'buyarr': buyarr}
