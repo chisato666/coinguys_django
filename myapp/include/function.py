@@ -101,8 +101,8 @@ def check_symbols_with_increased_5d(percent, interval, limit):
         x = 1
         for ticker in data['data']:
             x = x + 1
-            if (x > 30):
-                break
+            # if (x > 30):
+            #     break
             symbol = ticker['symbol']
             try:
                 print(symbol,interval,limit,percent)
@@ -420,8 +420,8 @@ percent=20
 # Assuming 'data' DataFrame has columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume']
 #data = check_symbols_kline(symbol, interval,limit)  # Replace this with your own data fetching logic
 
-list=check_symbols_with_increased_5d(percent,interval,limit)
-print(list)
+# list=check_symbols_with_increased_5d(percent,interval,limit)
+# print(list)
 # data=get_contract_info('TARA_USDT')
 # print(data['lastPrice'],data['symbol'])
 #print(check_symbols_with_high())

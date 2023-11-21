@@ -9,11 +9,13 @@ client= Client()
 
 
 class Backtest:
-    def __init__(self, symbol, start_date, end_date, period):
+    def __init__(self, symbol, start_date, end_date, period,buy_value,sell_value):
         self.symbol = symbol
         self.period = period
         self.start_date = start_date
         self.end_date = end_date
+        self.buy_value = buy_value
+        self.sell_value = sell_value
 
         #self.df = yf.download(self.symbol, start='2023-07-10',period = "1y",interval = "1h")
         self.getdata()
@@ -56,14 +58,19 @@ class Backtest:
         self.df.dropna(inplace=True)
 
     def generate_signals(self):
-        conditions = [(self.df.rsi < 30) & (self.df.Close < self.df.lower_bb),
-                      (self.df.rsi > 70) & (self.df.Close > self.df.upper_bb)]
+        choices = ['Buy', 'Sell']
+
+        program = 'conditions = [(self.df.rsi ' + self.buy_value[1] + ' ' + str( self.buy_value[2]) + ') , (self.df.rsi ' + self.sell_value[1] + ' ' + str( self.sell_value[2]) + ')]\nself.df[\'signal\'] = np.select(conditions, choices)'
+        print('Generate ' , program)
+
+        exec(program)
+        #conditions = [(self.df.rsi < 30), (self.df.rsi > 70)]
+        #conditions = [(self.df.rsi < 30) & (self.df.Close < self.df.lower_bb),
+         #             (self.df.rsi > 70) & (self.df.Close > self.df.upper_bb)]
 
         conditions2 = [(self.df.ret > 0.01),
                       (self.df.High > self.df.tp) | (self.df.Low < self.df.sl)]
 
-        choices = ['Buy', 'Sell']
-        self.df['signal'] = np.select(conditions, choices)
         self.df.signal = self.df.signal.shift()
         self.df.dropna(inplace=True)
 
@@ -98,7 +105,10 @@ symbol='ETHUSDT'
 start_date='2023-06-10'
 end_date='2023-08-02'
 period='1h'
-instance = Backtest(symbol,start_date,end_date,period)
+buy_value=['rsi','<',50]
+sell_value=['rsi','>',70]
+
+instance = Backtest(symbol,start_date,end_date,period,buy_value,sell_value)
 
 print(instance.buy_arr)
 
