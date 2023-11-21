@@ -211,11 +211,11 @@
 
 		  <select name="period">
               <option value=""></option>
-              <option value="15m">15m</option>
+              <option value="15m" >15m</option>
               <option value="30m">30m</option>
               <option value="1h">1hr</option>
-              <option value="4h" selected>4hr</option>
-              <option value="1d">1d</option>
+              <option value="4h" {% if data.period == '4h' %}selected{% endif %}>4h</option>
+              <option value="1d" {% if data.period == '1d' %}selected{% endif %}>1d</option>
             </select>
 		  </div>
 
@@ -224,7 +224,7 @@
 
 		 <select id="symbol" name="symbol">
                     {% for symbol in symbols %}
-                        <option>{{ symbol.symbol }}</option>
+                        <option {% if data.symbol == symbol.symbol %}selected{% endif %}>{{ symbol.symbol }}</option>
                     {% endfor %}
                 </select>
 		  </div>
@@ -245,9 +245,9 @@
         <div class="question">
           <p>Custom Rules</p>
           <div class="question-answer">
-            <input type="radio" value="none" id="radio_1" name="driving"/>
+            <input type="radio" value="yes" id="radio_1" name="custom"/>
             <label for="radio_1" class="radio"><span>Yes</span></label>
-            <input type="radio" value="none" id="radio_2" name="driving" />
+            <input type="radio" value="no" id="radio_2" name="custom" />
             <label for="radio_2" class="radio"><span>No</span></label>
           </div>
         </div>
@@ -259,7 +259,7 @@
      Buy If
           <p>Indicator</p>
           <div class="name-item">
-            <select name="b_indicator">
+            <select name="buy_indicator">
               <option value="RSI" selected>RSI</option>
               <option value="MACD">MACD</option>
               <option value="MA">MA</option>
@@ -268,7 +268,7 @@
 
 
             </select>
-             <select name="operator">
+             <select name="buy_operator">
               <option value="=" selected>=</option>
               <option value=">"> > </option>
               <option value=">="> = </option>
@@ -280,7 +280,7 @@
           </div>
 
 
-            <input type="text" name="enter_value" placeholder="enter_value" />
+            <input type="text" name="buy_enter_value" placeholder="b_enter_value" />
         </div>
 
 
@@ -289,7 +289,7 @@
      Sell If
           <p>Indicator</p>
           <div class="name-item">
-            <select name="s_indicator">
+            <select name="sell_indicator">
               <option value="RSI" selected>RSI</option>
               <option value="MACD">MACD</option>
               <option value="MA">MA</option>
@@ -300,7 +300,7 @@
 
 
             </select>
-             <select name="s_operator">
+             <select name="sell_operator">
               <option value="=" selected>=</option>
               <option value=">"> > </option>
               <option value=">="> = </option>
@@ -312,7 +312,7 @@
           </div>
 
 
-            <input type="text" name="s_enter_value" placeholder="enter_value" />
+            <input type="text" name="sell_enter_value" placeholder="sell_enter_value" />
         </div>
         <div class="btn-block">
           <button type="submit" >Submit</button>
@@ -337,7 +337,10 @@
 
         <h3>Input Values</h3>
 
-        <p>{{ in_value }}</p>
+        <p>{{ data.buy_value }}</p>
+
+        <p>{{ data.sell_value }}</p>
+
 
     </div>
         <div class="item">
@@ -360,10 +363,13 @@
 
     <div class="row header">
       <div class="cell">
-        Time
+       Buy Time
       </div>
       <div class="cell">
         Buy Price
+      </div>
+        <div class="cell">
+        Sell Time
       </div>
       <div class="cell">
         Sell Price
@@ -388,6 +394,10 @@
       </div>
                  <div class="cell" data-title="Name">
         {{ p_list.3 }}
+
+      </div>
+                 <div class="cell" data-title="Name">
+        {{ p_list.4 }}
 
       </div>
          </div>
