@@ -84,14 +84,18 @@ def login(login_name,login_pw):
 def input_form(title,tag,price,body,img_list,cala):
     try:
         s=driver.find_element(By.XPATH, "//input[@type='file']")
+        print('------------- input form start ------------')
+        print(img_list)
         if s:
-            print("file " + img_list)
+            #print("file " + img_list)
             s.send_keys(img_list)
 
         else:
             print("no file 2")
 
     except:
+        print("file " + img_list)
+
         print('file not found')
 
 
@@ -105,9 +109,15 @@ def input_form(title,tag,price,body,img_list,cala):
 
     time.sleep(1)
 
-    print("click calagouse \n")
+    if (cala=="Watch"):
+        print("click Watch calagouse \n")
 
-    s=driver.find_element(By.XPATH,'//*[@id="main"]/div/div/div[2]/div[2]/div/div[2]/div[2]/div/p').click()
+        s = driver.find_element(By.XPATH, '//*[@id="main"]/div/div/div[2]/div[2]/div/div[2]/div[4]/div/p').click()
+        #s = driver.find_element(By.XPATH, '// *[ @ id = "main"] / div / div / div[3] / div[2] / div[1] / div[2] / div[4] / div / p').click()
+    else:
+        print("click calagouse \n")
+
+        s=driver.find_element(By.XPATH,'//*[@id="main"]/div/div/div[2]/div[2]/div/div[2]/div[2]/div/p').click()
 
 
     time.sleep(1)
@@ -132,7 +142,6 @@ def input_form(title,tag,price,body,img_list,cala):
 
     #s=driver.find_element(By.XPATH,'//*[@id="main"]/div/div/div[2]/div[2]/div[2]/form/section/div[4]/div[2]/div/div[1]/button[2]/span').click()
 
-    print("click type of perfume option \n")
 
     time.sleep(1)
     # Enter Price
@@ -160,6 +169,24 @@ def input_form(title,tag,price,body,img_list,cala):
 
         s=driver.find_element(by=By.NAME, value='field_brand').send_keys(tag)
 
+    if (cala == "watch") or (cala == "wallet"):
+        button = driver.find_element(By.XPATH, '//*[@id="FieldSetField-Container-field_brand_enum"]/div/div[1]/div/div/input')
+        if button:
+            print("Brand button found",button)
+            button.click()
+            button.send_keys('Others')
+            button = driver.find_element(By.XPATH, '// *[ @ id = "FieldSetField-Container-field_brand_enum"] / div / div[2] / div / div / div / div / p')
+            button.click()
+            #button = driver.find_element(By.XPATH,'// *[ @ id = "FieldSetField-Container-field_brand"] / div / div / div / input').send_keys(tag[0])
+            time.sleep(2)
+
+        else:
+            print("Brand button not found")
+
+        print("enter watch brand")
+        s = driver.find_element(by=By.NAME, value='field_brand').send_keys(tag)
+
+
         time.sleep(1)
     #Select the delivered click box
 
@@ -178,8 +205,8 @@ def input_form(title,tag,price,body,img_list,cala):
     # Click the submit
 
     #s=driver.find_element(By.XPATH,'//*[@id="main"]/div/div/div[2]/div[2]/div[2]/form/div/button').click()
-
-    button = driver.find_element(By.XPATH, "//button[contains(text(),\'List now')]")
+    button=driver.find_element(By.XPATH,'// *[ @ id = "main"] / div / div / div[1] / div[2] / div / button / div')
+    #button = driver.find_element(By.XPATH, "//button[contains(text(),\'List now\')]")
     if button:
         print("List button found")
         button.click()
@@ -226,23 +253,30 @@ def input_form(title,tag,price,body,img_list,cala):
     time.sleep(2)
 
 
-#login('cfhh28','116116rm')
+#login('cfhh28','SrMn116888')
 
 #login('trendyground','socool666')
 
 
 #img_link='https://971e-210-6-94-85.ap.ngrok.io/photo/12SEP22-2/IMG_'
 
-excel_file='/Users/apple/Documents/Documents/Etsy/251023.csv'
-img_link='/Applications/XAMPP/xamppfiles/htdocs/photo/watch/gucci/IMG_'
-photo_ext='.JPG'
-currency=6
+
+excel_file='/Applications/XAMPP/xamppfiles/htdocs/photo/210224/210224_full.csv'
+img_link = '/Applications/XAMPP/xamppfiles/htdocs/photo/210224/210224/new/210224/IMG_'
+photo_ext = '.JPG'
+
+# excel_file='/Users/apple/perfumeHK/sample/191223.csv'
+# img_link='/Users/apple/perfumeHK/sample/'
+# photo_ext='.JPG'
+currency=7.5
 msg=""
-cala="watch"
+cala="Watch"
 
 my_functions.init()
 a=my_functions.load_data(excel_file,img_link,photo_ext,currency)
 
+print('-------- PRINT A --------')
+print(a)
 
 
 for i in range (0,len(a)):
@@ -274,11 +308,12 @@ for i in range (0,len(a)):
     #msg=translator.translate(msg, dest='zh-tw').text
     #option_ls=translator.translate(option_ls, dest='zh-tw').text
 
-    print("LEN" + str(len(img)) )
+    print("LEN --------------- " + str(len(img)) )
 
     for x in range(0, len(img)):
         #print(img[x])
         #s.send_keys("/Users/apple/Downloads/IMG_7303.JPG \n" + "/Users/apple/Downloads/IMG_7304.JPG")
+        print("----  START concat Image list --------------- " + str(len(img)))
 
         if x == 0:
             img_list=img[x]
@@ -286,6 +321,7 @@ for i in range (0,len(a)):
             img_list=img_list + " \n" + img[x]
 
         photo_found = True
+
 
     max_len = 0
 
@@ -317,7 +353,8 @@ for i in range (0,len(a)):
 
     #price=total
     tags = tags.split(",")
-
+    print(tags)
+    cala=tags[1]
     input_form(title, tags[0], int(price[0]), msg, img_list,cala)
 
 

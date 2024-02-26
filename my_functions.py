@@ -10,7 +10,7 @@ import string
 
 
 def init():
-    global title,tags,price,qty,image,body,option_name,option_value,variant_image,product_id,msg,sepa
+    global title,tags,price,qty,image,body,option_name,option_value,variant_image,product_id,msg,sepa,shopify_image
     title = 0
     tags = 1
     price = 2
@@ -24,7 +24,53 @@ def init():
     product_id = 10
     sepa=';'
 
+    shopify_image=25
+
+def download_image(url, save_path):
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open(save_path, 'wb') as file:
+            file.write(response.content)
+        print("Image downloaded successfully!")
+    else:
+        print("Failed to download image.")
+
+# Example usage
+
 #Load excel File into a list which
+def load_shopify_data(excel_file,img_link,photo_ext,currency):
+    columns = 10
+    rows = 0
+    sepa=";"
+    init()
+    a = [[0 for x in range(columns)] for y in range(rows)]
+    count=1
+    row_count = 0
+
+    with open(excel_file) as file_obj:
+        # Skips the heading
+        # Using next() method
+        heading = next(file_obj)
+
+        reader_obj = csv.reader(file_obj)
+
+        # Iterate over each row in the csv file
+        for row in reader_obj:
+
+            # printing lowercase
+            letters = string.ascii_lowercase
+            rad= ''.join(random.choice(letters) for i in range(10))
+
+            ls = row[shopify_image]
+
+            print(ls)
+
+            if (ls !=""):
+                save_location = img_link + str(count).zfill(4) + photo_ext
+                print(save_location)
+                download_image(ls, save_location)
+                count=count+1
+
 
 def load_data(excel_file,img_link,photo_ext,currency):
     columns = 10
@@ -50,12 +96,12 @@ def load_data(excel_file,img_link,photo_ext,currency):
             rad= ''.join(random.choice(letters) for i in range(10))
 
             ls = row[image].split(sepa)
-
+            print(ls)
             ls3=load_photo(ls,img_link,photo_ext)
-            #print("LS3 XXXX = ")
-            #print(*ls3, sep=',')
+            print("LS3 XXXX = ")
+            print(*ls3, sep=',')
             pp = row[price].split(sepa)
-            pp = [int(item) * currency for item in pp]
+            pp = [float(item) * currency for item in pp]
 
             #pp = [num * currency for num in range(1, len(pp))]
             ov = row[option_value].split(sepa)
@@ -84,12 +130,17 @@ def load_data(excel_file,img_link,photo_ext,currency):
             # print (*ls3, sep=",")
             # print("LS3 XXXX XXXXX - " + str(len(ls3)))
 
+
+            #Remarks 090124
+
             for i in range(0, len(ls3)):
-                #img = img_link + str(ls3[i]) + photo_ext
-                #print("IMG XXXXX" + img)
+                img = img_link + str(ls3[i]) + photo_ext
+                print("IMG XXXXX" + img)
                 if (os.path.isfile(ls3[i])):
                     #print("ls 3 --- "  + str(ls3[i]))
                     img_list.append(ls3[i])
+
+            # Remarks 090124
 
             #print(" msg !!! " + msg)
             # print(" Tags " + row[tags])
@@ -127,17 +178,29 @@ def load_photo(ls,img_link,photo_ext):
 
         for x in range(0, diff):
             img_num = x + int(ls[0])
+            if "IMG_" in img_link:
+                v_img = img_link + str(img_num).zfill(4) + photo_ext
+            else:
+                v_img = img_link + str(img_num)  + photo_ext
 
-            v_img = img_link + str(img_num).zfill(4) + photo_ext
-            #print("Load photo " + v_img)
+
             if (os.path.isfile(v_img)):
                 ls3[img_count] = v_img
+                print("Load photo here " + v_img)
+
                 if (x!=diff):
                     img_count = img_count + 1
                 print("   v_img {} diff {} ls3 {} ls1 {} ".format(v_img, diff, ls3[x], ls))
     else:
         ls3 = [""]
-        v_img = img_link + str(ls[0]).zfill(4) + photo_ext
+
+        if "IMG_" in img_link:
+            v_img = img_link + str(ls[0]).zfill(4) + photo_ext
+        else:
+            v_img = img_link + str(ls[0]) + photo_ext
+
+        print('v_img',v_img)
+
         if (os.path.isfile(v_img)):
             ls3[0] = v_img
         img_count = 1
@@ -184,3 +247,22 @@ def send_email(toaddr):
     message = "From: %s\r\n" % fromaddr + "To: %s\r\n" % toaddr + "CC: %s\r\n" % ",".join(
         cc) + "Subject: %s\r\n" % subject + "\r\n" + msg
     server.sendmail(fromaddr, toaddrs, body)
+
+# excel_file='/Users/apple/perfumeHK/sample/products_export.csv'
+# img_link='/Users/apple/perfumeHK/sample/201223/'
+# photo_ext='.jpg'
+# currency=8
+# load_shopify_data(excel_file,img_link,photo_ext,currency)
+
+
+# excel_file='/Applications/XAMPP/xamppfiles/htdocs/photo/030124/251023.csv'
+# img_link = '/Applications/XAMPP/xamppfiles/htdocs/photo/030124/IMG_'
+# photo_ext = '.JPG'
+# currency=8
+#
+# cala="Watch"
+#
+# init()
+# a=load_data(excel_file,img_link,photo_ext,currency)
+#
+# print(a)

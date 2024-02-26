@@ -4,7 +4,6 @@ import numpy as np
 import yfinance as yf
 import matplotlib.pyplot as plt
 import csv
-import ta-lib
 import ta
 import function
 

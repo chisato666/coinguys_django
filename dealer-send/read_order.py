@@ -1,7 +1,6 @@
 import csv
 import random
 import string
-import my_functions
 import os.path
 import time
 import pandas as pd
@@ -18,9 +17,9 @@ postal=40
 state=41
 phone=43
 
-img_link='/Users/apple/perfumeHK/'
-photo_ext='.jpeg'
-export_file='export.csv'
+# img_link='/Users/apple/perfumeHK/'
+# photo_ext='.jpeg'
+#export_file='export.csv'
 
 excel_file='orders_export.csv'
 
@@ -117,7 +116,7 @@ row = x
 
 
 print(df.iat[1, 0])
-DG_list=['US','AU','SG','IT']
+DG_list=['']
 
 for i in range(len(df)):
     y = str(row+1)
@@ -126,10 +125,8 @@ for i in range(len(df)):
     worksheet["A" + str(y)] = df.iat[i, 0]
     worksheet["B" + str(y)] = "DealerSend"
 
-    if df.iat[i, 1]=='US':
-        worksheet["C" + str(y)] = "Direct Line - Postal eBay HK"
-    else:
-        worksheet["C" + str(y)] = "Direct Line - Postal"
+
+    worksheet["C" + str(y)] = "Direct Line - Postal"
 
     worksheet["D" + str(y)] = "skin care"
     worksheet["E" + str(y)] = 1

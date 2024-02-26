@@ -24,9 +24,8 @@ option_value=7
 variant_image=8
 
 count=0
-
-img_link='https://9c05-182-239-122-133.ngrok-free.app/photo/watch/gucci/IMG_'
-excel_file='/Users/apple/Documents/Documents/Etsy/251023.csv'
+img_link='https://d6ab-124-244-246-131.ngrok-free.app/photo/220224/IMG_'
+excel_file='/Applications/XAMPP/xamppfiles/htdocs/photo/220224/220224_full.csv'
 photo_ext='.JPG'
 
 data = {
