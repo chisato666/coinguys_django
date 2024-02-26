@@ -53,8 +53,7 @@ class Backtest:
         self.df['tp'] = self.df.Close * 1.02
 
         self.df['price'] = self.df.Open.shift(-1)
-
-        self.df['rsi'] = ta.RSI(self.df.Close)
+        self.df['rsi'] =ta.RSI(self.df.Close)
         self.df.dropna(inplace=True)
 
     def generate_signals(self):

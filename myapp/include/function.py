@@ -101,8 +101,8 @@ def check_symbols_with_increased_5d(percent, interval, limit):
         x = 1
         for ticker in data['data']:
             x = x + 1
-            # if (x > 30):
-            #     break
+            if (x > 30):
+                break
             symbol = ticker['symbol']
             try:
                 print(symbol,interval,limit,percent)
@@ -274,14 +274,13 @@ def get_symbols_with_price_increase(rate):
         #symbol_list=['BTC_USDT','ETH_USDT','CLORE_USDT','ARKM_USDT','GFT_USDT','LUNANEW_USDT','TARA_USDT','ASTRA_USDT','AUCTION_USDT','BIGTIME_USDT', 'BNXNEW_USDT', 'LQTY_USDT', 'LOOM_USDT', 'TOMI_USDT']
         symbol_list=['1000PEPE2_USDT',
  '1000BONK_USDT',
- 'AGLD_USDT',
- 'CFX_USDT',
+ 'BTC_USDT',
+ 'ETH_USDT',
  'INJ_USDT',
  'LINK_USDT',
- 'MINA_USDT',
- 'PEPE_USDT',
+ 'SOL_USDT',
  'TRB_USDT',
- 'UNFI_USDT']
+ 'MEME_USDT']
         symbols = []
         current_trend = {symbol: None for symbol in symbol_list}
 
@@ -420,8 +419,8 @@ percent=20
 # Assuming 'data' DataFrame has columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume']
 #data = check_symbols_kline(symbol, interval,limit)  # Replace this with your own data fetching logic
 
-# list=check_symbols_with_increased_5d(percent,interval,limit)
-# print(list)
+list=check_symbols_with_increased_5d(percent,interval,limit)
+print(list)
 # data=get_contract_info('TARA_USDT')
 # print(data['lastPrice'],data['symbol'])
 #print(check_symbols_with_high())
